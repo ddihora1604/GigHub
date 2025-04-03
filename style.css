@@ -1,0 +1,344 @@
+/* GigHub Styling - Dark Theme */
+
+:root {
+    /* Common Colors */
+    --bg-dark: #000000;
+    --bg-card: #111111;
+    --text-primary: #ffffff;
+    --text-secondary: #a0aec0;
+    --border-color: #2d3748;
+    
+    /* Client Colors */
+    --client-primary: #4f46e5;
+    --client-hover: #4338ca;
+    --client-focus: #818cf8;
+    --client-icon: #4f46e5;
+    --client-badge: #3730a3;
+    --client-badge-bg: #312e81;
+    
+    /* Freelancer Colors */
+    --freelancer-primary: #10b981;
+    --freelancer-hover: #059669;
+    --freelancer-focus: #34d399;
+    --freelancer-icon: #10b981;
+    --freelancer-badge: #065f46;
+    --freelancer-badge-bg: #064e3b;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Layout structure for fixed sidebar */
+.min-h-screen.flex.flex-col {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Common UI Components */
+.sidebar {
+    background-color: var(--bg-dark);
+    border-right: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 56px); /* Adjust for navbar height */
+    overflow-y: auto;
+}
+
+.navbar {
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Main content container */
+.flex.flex-1 {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+}
+
+/* Allow scrolling in main content */
+main.flex-1.overflow-auto {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Message interface specific styling */
+/* Conversation list panel */
+.w-72.border-r.border-gray-800.overflow-y-auto {
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Chat area container */
+.flex-1.flex.flex-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Message container should scroll while header and input stay fixed */
+#message-container {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Chat header and input bar should stay fixed */
+.flex.justify-between.items-center.p-4.border-b.border-gray-800,
+.p-4.border-t.border-gray-800 {
+    position: sticky;
+    background-color: var(--bg-dark);
+    z-index: 10;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table th {
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Input styling */
+input, textarea, select {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--client-focus);
+}
+
+/* Sidebar Menu Items */
+.menu-item {
+    display: flex;
+    align-items: center;
+    border-radius: 0.25rem;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.menu-item i {
+    width: 1.5rem;
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+/* Client-specific Styling */
+.client-theme .menu-item.active {
+    color: var(--client-primary);
+    background-color: rgba(79, 70, 229, 0.1);
+}
+
+.client-theme .menu-item.active i {
+    color: var(--client-primary);
+}
+
+.client-theme .btn-primary {
+    background-color: var(--client-primary);
+    color: white;
+}
+
+.client-theme .btn-primary:hover {
+    background-color: var(--client-hover);
+}
+
+.client-theme .text-brand {
+    color: var(--client-primary);
+}
+
+.client-theme .icon-primary {
+    color: var(--client-icon);
+}
+
+.client-theme .badge {
+    background-color: var(--client-badge-bg);
+    color: var(--client-primary);
+}
+
+/* Freelancer-specific Styling */
+.freelancer-theme .menu-item.active {
+    color: var(--freelancer-primary);
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+.freelancer-theme .menu-item.active i {
+    color: var(--freelancer-primary);
+}
+
+.freelancer-theme .btn-primary {
+    background-color: var(--freelancer-primary);
+    color: white;
+}
+
+.freelancer-theme .btn-primary:hover {
+    background-color: var(--freelancer-hover);
+}
+
+.freelancer-theme .text-brand {
+    color: var(--freelancer-primary);
+}
+
+.freelancer-theme .icon-primary {
+    color: var(--freelancer-icon);
+}
+
+.freelancer-theme .badge {
+    background-color: var(--freelancer-badge-bg);
+    color: var(--freelancer-primary);
+}
+
+/* Status badges */
+.status-progress {
+    background-color: #92400e;
+    color: #fbbf24;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status-completed {
+    background-color: #065f46;
+    color: #10b981;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status-pending {
+    background-color: #312e81;
+    color: #818cf8;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status-draft {
+    background-color: #1f2937;
+    color: #9ca3af;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Card styles for stats */
+.stat-card {
+    background-color: var(--bg-card);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+}
+
+.client-theme .stat-icon {
+    background-color: rgba(79, 70, 229, 0.2);
+    color: var(--client-primary);
+}
+
+.freelancer-theme .stat-icon {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: var(--freelancer-primary);
+}
+
+/* Button styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+/* Rating stars */
+.rating {
+    color: #fbbf24;
+}
+
+/* Gig Score badges */
+.client-theme .gig-score {
+    color: var(--client-primary);
+}
+
+.freelancer-theme .gig-score {
+    color: var(--freelancer-primary);
+}
+
+/* Extra utilities */
+.divider {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 1rem 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a5568;
+} 

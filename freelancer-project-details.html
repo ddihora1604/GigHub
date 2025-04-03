@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigHub - Project Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white freelancer-theme">
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <nav class="navbar px-4 py-3 flex items-center justify-between border-b border-gray-800">
+            <div class="flex items-center">
+                <a href="freelancer-dashboard.html" class="text-2xl font-bold text-green-500">GigHub</a>
+                <span class="ml-2 bg-green-900 px-2 py-1 rounded text-xs text-white">Freelancer</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <div class="relative">
+                    <button class="flex items-center text-sm font-medium text-gray-300 hover:text-white">
+                        <span>John</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <div class="sidebar w-64 border-r border-gray-800">
+                <div class="flex flex-col h-full py-4">
+                    <a href="freelancer-dashboard.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-home text-lg w-6"></i>
+                        <span class="ml-3">Dashboard</span>
+                    </a>
+                    <a href="project-search.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-search text-lg w-6"></i>
+                        <span class="ml-3">Find Projects</span>
+                    </a>
+                    <a href="freelancer-projects.html" class="menu-item active flex items-center px-6 py-3">
+                        <i class="fas fa-project-diagram text-lg w-6"></i>
+                        <span class="ml-3">My Projects</span>
+                    </a>
+                    <a href="freelancer-messages.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-comment text-lg w-6"></i>
+                        <span class="ml-3">Messages</span>
+                    </a>
+                    <a href="freelancer-profile.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-user text-lg w-6"></i>
+                        <span class="ml-3">Profile</span>
+                    </a>
+                    <a href="freelancer-pay.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-credit-card text-lg w-6"></i>
+                        <span class="ml-3">Payments</span>
+                    </a>
+                    <a href="login.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-sign-out-alt text-lg w-6"></i>
+                        <span class="ml-3">Logout</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="flex-1 overflow-auto p-6">
+                <!-- Breadcrumbs -->
+                <div class="flex items-center text-sm text-gray-500 mb-4">
+                    <a href="freelancer-projects.html" class="hover:text-green-500">Projects</a>
+                    <span class="mx-2">/</span>
+                    <a href="#" class="text-gray-400">E-commerce Website Redesign</a>
+                </div>
+
+                <!-- Project Header -->
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h1 class="text-3xl font-bold text-white mb-2">E-commerce Website Redesign</h1>
+                        <div class="flex items-center">
+                            <p class="text-gray-400">Client: TechRetail Solutions</p>
+                            <span class="ml-4 px-3 py-1 bg-green-900/50 text-green-500 text-xs font-medium rounded-full">In Progress</span>
+                        </div>
+                        <p class="text-gray-400 mt-1">Due in 21 days</p>
+                    </div>
+                    <div class="flex space-x-3">
+                        <a href="freelancer-messages.html" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded flex items-center">
+                            <i class="fas fa-comment mr-2"></i> Message Client
+                        </a>
+                        <button class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded flex items-center">
+                            <i class="fas fa-file-export mr-2"></i> Export
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="border-b border-gray-800 mb-6">
+                    <nav class="flex">
+                        <a href="#overview" class="px-6 py-3 text-gray-500 hover:text-gray-300">Overview</a>
+                        <a href="#milestones" class="px-6 py-3 text-green-500 border-b-2 border-green-500 font-medium">Milestones</a>
+                        <a href="#project-details" class="px-6 py-3 text-gray-500 hover:text-gray-300">Project Details</a>
+                        <a href="#files" class="px-6 py-3 text-gray-500 hover:text-gray-300">Files</a>
+                    </nav>
+                </div>
+
+                <!-- Overview Tab (Initially Hidden) -->
+                <div id="overview" class="tab-content hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <!-- Left Column - Project Description -->
+                        <div class="lg:col-span-2 space-y-6">
+                            <div>
+                                <h2 class="text-xl font-bold text-white mb-4">Project Description</h2>
+                                <div class="text-gray-300 space-y-4">
+                                    <p>Complete redesign of TechRetail's e-commerce website to improve user experience, increase conversions, and modernize the brand's digital presence. The project includes a new responsive design, improved product categorization, enhanced search functionality, and integration with their inventory management system.</p>
+                                    <p class="border-l-4 border-green-500 pl-4 italic">The project includes a new responsive design, improved product categorization, enhanced search functionality, and integration with their inventory management system.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h2 class="text-xl font-bold text-white mb-4">Key Deliverables:</h2>
+                                <ul class="list-disc list-inside text-gray-300 space-y-2 ml-2">
+                                    <li>Responsive website design for all devices</li>
+                                    <li>Improved checkout process to reduce cart abandonment</li>
+                                    <li>Advanced product filtering and search functionality</li>
+                                    <li>Customer account dashboard redesign</li>
+                                    <li>Integration with existing payment gateways</li>
+                                    <li>Admin dashboard for content management</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Right Column - Project Details -->
+                        <div class="space-y-6">
+                            <div class="bg-gray-900 border border-gray-800 rounded-lg p-6">
+                                <h2 class="text-lg font-bold text-white mb-4">Details</h2>
+                                
+                                <div class="space-y-4">
+                                    <div>
+                                        <p class="text-gray-500 text-sm">Start Date</p>
+                                        <p class="text-white">May 10, 2023</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <p class="text-gray-500 text-sm">End Date</p>
+                                        <p class="text-white">Aug 10, 2023</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <p class="text-gray-500 text-sm">Contract Type</p>
+                                        <p class="text-white">Fixed Price</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <p class="text-gray-500 text-sm">Category</p>
+                                        <p class="text-white">Web Development</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-900 border border-gray-800 rounded-lg p-6">
+                                <h2 class="text-lg font-bold text-white mb-4">Recent Activity</h2>
+                                
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-green-900 rounded-full flex items-center justify-center text-green-500">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">Milestone Completed</p>
+                                            <p class="text-gray-400">Wireframing & Design completed</p>
+                                            <p class="text-gray-500 text-sm mt-1">2 days ago</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-green-500">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">Payment Received</p>
+                                            <p class="text-gray-400">$2,000 for Wireframing & Design</p>
+                                            <p class="text-gray-500 text-sm mt-1">3 days ago</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-green-500">
+                                                <i class="fas fa-file-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">Files Uploaded</p>
+                                            <p class="text-gray-400">Wireframes and mockups</p>
+                                            <p class="text-gray-500 text-sm mt-1">5 days ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestones Tab (Initially Visible) -->
+                <div id="milestones" class="tab-content">
+                    <h2 class="text-2xl font-bold text-white mb-6">Project Milestones</h2>
+                    
+                    <!-- Milestone Statistics -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center text-center">
+                            <h3 class="text-2xl font-bold text-green-500 mb-1">2/5</h3>
+                            <p class="text-gray-400">Completed</p>
+                        </div>
+                        
+                        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center text-center">
+                            <h3 class="text-2xl font-bold text-yellow-500 mb-1">1/5</h3>
+                            <p class="text-gray-400">In Progress</p>
+                        </div>
+                        
+                        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center text-center">
+                            <h3 class="text-2xl font-bold text-gray-300 mb-1">2/5</h3>
+                            <p class="text-gray-400">Pending</p>
+                        </div>
+                        
+                        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 flex flex-col items-center justify-center text-center">
+                            <h3 class="text-2xl font-bold text-green-500 mb-1">$2,400</h3>
+                            <p class="text-gray-400">Total Value</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Overall Progress -->
+                    <div class="mb-8">
+                        <div class="flex justify-between mb-2">
+                            <h3 class="text-white font-medium">Overall Progress</h3>
+                            <span class="text-green-500">40%</span>
+                        </div>
+                        <div class="w-full bg-gray-800 rounded-full h-2.5">
+                            <div class="bg-green-500 h-2.5 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Milestone List -->
+                    <div class="space-y-4">
+                        <!-- Initial Design Concepts - Completed -->
+                        <div class="bg-gray-900 border border-gray-800 rounded-lg p-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-green-500 mr-4">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white font-medium">Initial Design Concepts</h4>
+                                        <p class="text-gray-400 text-sm">Completed on May 15, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-green-500 font-medium mr-4">$500</span>
+                                    <button class="text-gray-400 hover:text-white">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- HTML/CSS Implementation - Completed -->
+                        <div class="bg-gray-900 border border-gray-800 rounded-lg p-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-green-500 mr-4">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white font-medium">HTML/CSS Implementation</h4>
+                                        <p class="text-gray-400 text-sm">Completed on May 28, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-green-500 font-medium mr-4">$700</span>
+                                    <button class="text-gray-400 hover:text-white">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Backend Integration - In Progress -->
+                        <div class="bg-gray-900 border border-gray-800 rounded-lg p-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-yellow-500 mr-4">
+                                        <i class="fas fa-circle-notch"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white font-medium">Backend Integration</h4>
+                                        <p class="text-gray-400 text-sm">Due on June 15, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-yellow-500 font-medium mr-4">$800</span>
+                                    <button class="text-gray-400 hover:text-white">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testing & Debugging - Pending -->
+                        <div class="bg-gray-900 border border-gray-800 rounded-lg p-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-gray-500 mr-4">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white font-medium">Testing & Debugging</h4>
+                                        <p class="text-gray-400 text-sm">Due on June 30, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-gray-400 font-medium mr-4">$200</span>
+                                    <button class="text-gray-400 hover:text-white">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Launch - Pending -->
+                        <div class="bg-gray-900 border border-gray-800 rounded-lg p-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-gray-500 mr-4">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white font-medium">Launch</h4>
+                                        <p class="text-gray-400 text-sm">Due on July 15, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-gray-400 font-medium mr-4">$200</span>
+                                    <button class="text-gray-400 hover:text-white">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Details Tab (Initially Hidden) -->
+                <div id="project-details" class="tab-content hidden">
+                    <h2 class="text-2xl font-bold text-white mb-6">Project Details</h2>
+                    
+                    <div class="bg-gray-900 border border-gray-800 rounded-lg p-8 mb-6">
+                        <div class="flex items-center text-green-500 mb-4">
+                            <i class="fas fa-info-circle mr-3 text-xl"></i>
+                            <h3 class="text-xl font-semibold">Project Overview</h3>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-6">TechRetail Solutions is looking to redesign their e-commerce platform to improve user experience, increase conversion rates, and implement modern design practices. The current site is functional but outdated, with limited mobile responsiveness and performance issues during high traffic periods.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-black bg-opacity-40 rounded-lg p-4">
+                                <h4 class="text-gray-400 text-sm mb-2">Project Type</h4>
+                                <p class="text-green-500 font-medium">E-commerce Redesign</p>
+                            </div>
+                            
+                            <div class="bg-black bg-opacity-40 rounded-lg p-4">
+                                <h4 class="text-gray-400 text-sm mb-2">Started</h4>
+                                <p class="text-white">May 10, 2023</p>
+                            </div>
+                            
+                            <div class="bg-black bg-opacity-40 rounded-lg p-4">
+                                <h4 class="text-gray-400 text-sm mb-2">Expected Completion</h4>
+                                <p class="text-white">July 15, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-900 border border-gray-800 rounded-lg p-8 mb-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex items-center text-green-500">
+                                <i class="fas fa-list-ul mr-3 text-xl"></i>
+                                <h3 class="text-xl font-semibold">Project Requirements</h3>
+                            </div>
+                            <span class="bg-green-900 text-green-400 px-3 py-1 rounded-full text-xs flex items-center">
+                                <i class="fas fa-check-circle mr-1"></i>
+                                Client Approved
+                            </span>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="border border-gray-800 rounded-lg">
+                                <div class="p-4 flex items-center justify-between cursor-pointer">
+                                    <div class="flex items-center text-white">
+                                        <i class="fas fa-mobile-alt mr-3 text-green-500"></i>
+                                        <h4 class="font-medium">Responsive Design</h4>
+                                    </div>
+                                    <i class="fas fa-chevron-down text-gray-500"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-800 rounded-lg">
+                                <div class="p-4 flex items-center justify-between cursor-pointer">
+                                    <div class="flex items-center text-white">
+                                        <i class="fas fa-shopping-cart mr-3 text-green-500"></i>
+                                        <h4 class="font-medium">Shopping Experience</h4>
+                                    </div>
+                                    <i class="fas fa-chevron-down text-gray-500"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-800 rounded-lg">
+                                <div class="p-4 flex items-center justify-between cursor-pointer">
+                                    <div class="flex items-center text-white">
+                                        <i class="fas fa-tachometer-alt mr-3 text-green-500"></i>
+                                        <h4 class="font-medium">Performance Optimization</h4>
+                                    </div>
+                                    <i class="fas fa-chevron-down text-gray-500"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-800 rounded-lg">
+                                <div class="p-4 flex items-center justify-between cursor-pointer">
+                                    <div class="flex items-center text-white">
+                                        <i class="fas fa-credit-card mr-3 text-green-500"></i>
+                                        <h4 class="font-medium">Payment Integration</h4>
+                                    </div>
+                                    <i class="fas fa-chevron-down text-gray-500"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-800 rounded-lg">
+                                <div class="p-4 flex items-center justify-between cursor-pointer">
+                                    <div class="flex items-center text-white">
+                                        <i class="fas fa-universal-access mr-3 text-green-500"></i>
+                                        <h4 class="font-medium">Accessibility & SEO</h4>
+                                    </div>
+                                    <i class="fas fa-chevron-down text-gray-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-900 border border-gray-800 rounded-lg p-8">
+                        <div class="flex items-center text-green-500 mb-6">
+                            <i class="fas fa-code mr-3 text-xl"></i>
+                            <h3 class="text-xl font-semibold">Technical Specifications</h3>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-white font-medium mb-4">Frontend</h4>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-blue-900 rounded flex items-center justify-center text-blue-500">
+                                                <i class="fab fa-react"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">React.js</p>
+                                            <p class="text-gray-400 text-sm">UI Components & State Management</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-blue-900 rounded flex items-center justify-center text-blue-500">
+                                                <i class="fab fa-css3-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">Tailwind CSS</p>
+                                            <p class="text-gray-400 text-sm">Styling & Responsive Design</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-yellow-900 rounded flex items-center justify-center text-yellow-500">
+                                                <i class="fab fa-js"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">ES6+ JavaScript</p>
+                                            <p class="text-gray-400 text-sm">Client-side Logic</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-white font-medium mb-4">Backend & APIs</h4>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-green-900 rounded flex items-center justify-center text-green-500">
+                                                <i class="fab fa-node-js"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">Node.js with Express</p>
+                                            <p class="text-gray-400 text-sm">Backend Framework</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-green-900 rounded flex items-center justify-center text-green-500">
+                                                <i class="fas fa-database"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">MongoDB</p>
+                                            <p class="text-gray-400 text-sm">Database</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-indigo-900 rounded flex items-center justify-center text-indigo-500">
+                                                <i class="fas fa-exchange-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">RESTful API</p>
+                                            <p class="text-gray-400 text-sm">Data Communication</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                            <div>
+                                <h4 class="text-white font-medium mb-4">Testing & Deployment</h4>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-red-900 rounded flex items-center justify-center text-red-500">
+                                                <i class="fas fa-vial"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">Jest & React Testing Library</p>
+                                            <p class="text-gray-400 text-sm">Unit & Integration Testing</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-orange-900 rounded flex items-center justify-center text-orange-500">
+                                                <i class="fab fa-aws"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">AWS</p>
+                                            <p class="text-gray-400 text-sm">Cloud Hosting & Services</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-gray-800 rounded flex items-center justify-center text-gray-400">
+                                                <i class="fab fa-github"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">GitHub Actions</p>
+                                            <p class="text-gray-400 text-sm">CI/CD Pipeline</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-white font-medium mb-4">Integrations</h4>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-blue-900 rounded flex items-center justify-center text-blue-500">
+                                                <i class="fab fa-stripe-s"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">Stripe Payments</p>
+                                            <p class="text-gray-400 text-sm">Payment Processing</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-blue-900 rounded flex items-center justify-center text-blue-500">
+                                                <i class="fab fa-paypal"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">PayPal</p>
+                                            <p class="text-gray-400 text-sm">Alternative Payment Method</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <div class="w-8 h-8 bg-orange-900 rounded flex items-center justify-center text-orange-500">
+                                                <i class="fas fa-shipping-fast"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-white font-medium">Shipping Providers API</p>
+                                            <p class="text-gray-400 text-sm">Shipping & Tracking</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Files Tab (Initially Hidden) -->
+                <div id="files" class="tab-content hidden">
+                    <h2 class="text-2xl font-bold text-white mb-6">Project Files</h2>
+                    
+                    <!-- File Categories -->
+                    <div class="border-b border-gray-800 mb-6">
+                        <div class="flex overflow-x-auto">
+                            <a href="#all" class="px-6 py-3 text-green-500 border-b-2 border-green-500 font-medium whitespace-nowrap">All Files</a>
+                            <a href="#documents" class="px-6 py-3 text-gray-500 hover:text-gray-300 whitespace-nowrap">Documents</a>
+                            <a href="#images" class="px-6 py-3 text-gray-500 hover:text-gray-300 whitespace-nowrap">Images</a>
+                            <a href="#design" class="px-6 py-3 text-gray-500 hover:text-gray-300 whitespace-nowrap">Design Files</a>
+                        </div>
+                    </div>
+                    
+                    <!-- File List -->
+                    <div class="space-y-6">
+                        <!-- PDF File -->
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-gray-900 border border-gray-800 rounded-lg p-4">
+                            <div class="flex items-center mb-4 sm:mb-0">
+                                <div class="w-14 h-14 bg-red-900/30 rounded flex items-center justify-center mr-4">
+                                    <i class="far fa-file-pdf text-red-500 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-green-500 font-medium">Project_Brief.pdf</h4>
+                                    <p class="text-gray-400 text-sm">PDF Document • 2.4 MB • Uploaded on May 10, 2023</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-6">
+                                <button class="text-green-500 hover:text-green-400">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="text-gray-400 hover:text-white">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- ZIP File -->
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-gray-900 border border-gray-800 rounded-lg p-4">
+                            <div class="flex items-center mb-4 sm:mb-0">
+                                <div class="w-14 h-14 bg-blue-900/30 rounded flex items-center justify-center mr-4">
+                                    <i class="far fa-file-archive text-blue-500 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-green-500 font-medium">Design_Mockups.zip</h4>
+                                    <p class="text-gray-400 text-sm">ZIP Archive • 34.2 MB • Uploaded on May 20, 2023</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-6">
+                                <button class="text-green-500 hover:text-green-400">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="text-gray-400 hover:text-white">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- DOCX File -->
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-gray-900 border border-gray-800 rounded-lg p-4">
+                            <div class="flex items-center mb-4 sm:mb-0">
+                                <div class="w-14 h-14 bg-blue-900/30 rounded flex items-center justify-center mr-4">
+                                    <i class="far fa-file-word text-blue-500 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-green-500 font-medium">Technical_Requirements.docx</h4>
+                                    <p class="text-gray-400 text-sm">Word Document • 1.2 MB • Uploaded on May 12, 2023</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-6">
+                                <button class="text-green-500 hover:text-green-400">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="text-gray-400 hover:text-white">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- XLSX File -->
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-gray-900 border border-gray-800 rounded-lg p-4">
+                            <div class="flex items-center mb-4 sm:mb-0">
+                                <div class="w-14 h-14 bg-green-900/30 rounded flex items-center justify-center mr-4">
+                                    <i class="far fa-file-excel text-green-500 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-green-500 font-medium">Project_Timeline.xlsx</h4>
+                                    <p class="text-gray-400 text-sm">Excel Spreadsheet • 0.8 MB • Uploaded on May 14, 2023</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-6">
+                                <button class="text-green-500 hover:text-green-400">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="text-gray-400 hover:text-white">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Script for tab navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('nav a');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            // Function to switch tabs
+            function switchTab(targetHref) {
+                const targetId = targetHref.split('#')[1];
+                
+                // Hide all tab contents
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                // Show the selected tab content
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.remove('hidden');
+                }
+                
+                // Update active tab styling
+                tabs.forEach(t => {
+                    t.classList.remove('text-green-500', 'border-b-2', 'border-green-500');
+                    t.classList.add('text-gray-500');
+                });
+                    
+                // Set the clicked tab as active
+                tabs.forEach(t => {
+                    if (t.getAttribute('href') === '#' + targetId) {
+                        t.classList.remove('text-gray-500');
+                        t.classList.add('text-green-500', 'border-b-2', 'border-green-500');
+                    }
+                });
+                
+                // Update URL hash without scrolling
+                history.pushState(null, null, '#' + targetId);
+                
+                // If this is the files tab, ensure the "All Files" category is active
+                if (targetId === 'files') {
+                    const allFilesTab = document.querySelector('#files .border-b .flex a[href="#all"]');
+                    if (allFilesTab) {
+                        switchFileCategory(allFilesTab);
+                    }
+                }
+            }
+            
+            // Add click event to tabs
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    switchTab(this.getAttribute('href'));
+                });
+            });
+            
+            // File category tabs functionality
+            const fileCategoryTabs = document.querySelectorAll('#files .border-b .flex a');
+            
+            function switchFileCategory(tab) {
+                // Update active tab styling
+                fileCategoryTabs.forEach(t => {
+                    t.classList.remove('text-green-500', 'border-b-2', 'border-green-500');
+                    t.classList.add('text-gray-500', 'hover:text-gray-300');
+                });
+                
+                // Set clicked tab as active
+                tab.classList.remove('text-gray-500', 'hover:text-gray-300');
+                tab.classList.add('text-green-500', 'border-b-2', 'border-green-500');
+                
+                // Here we would normally handle showing/hiding files based on category
+                // For now, we'll just use this for UI state as all files are always visible
+            }
+            
+            // Add click event to file category tabs
+            fileCategoryTabs.forEach(tab => {
+                tab.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    switchFileCategory(this);
+                });
+            });
+            
+            // Check if URL has a hash on load
+            if (window.location.hash) {
+                // Check if the hash corresponds to a valid tab
+                const tabExists = Array.from(tabs).some(tab => tab.getAttribute('href') === window.location.hash);
+                if (tabExists) {
+                    switchTab(window.location.hash);
+                } else {
+                    // Default to Milestones tab if hash is invalid
+                    switchTab('#milestones');
+                }
+            } else {
+                // By default, show Milestones tab
+                switchTab('#milestones');
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigHub - Post a Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white client-theme">
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <nav class="navbar px-4 py-3 flex items-center justify-between border-b border-gray-800">
+            <div class="flex items-center">
+                <a href="client-dashboard.html" class="text-2xl font-bold text-indigo-600">GigHub</a>
+                <span class="ml-2 bg-indigo-900 px-2 py-1 rounded text-xs text-white">Client</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <div class="relative">
+                    <button class="flex items-center text-sm font-medium text-gray-300 hover:text-white">
+                        <!-- <img src="/api/placeholder/30/30" alt="Profile" class="h-8 w-8 rounded-full mr-2"> -->
+                        <span>John</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <div class="sidebar w-64 px-3 py-4 flex flex-col">
+                <a href="client-dashboard.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-home mr-3"></i>
+                    Dashboard
+                </a>
+                <a href="client-projects.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-project-diagram mr-3"></i>
+                    My Projects
+                </a>
+                <a href="post-project.html" class="menu-item active py-2 px-4">
+                    <i class="fas fa-plus-circle mr-3"></i>
+                    Post New Project
+                </a>
+                <a href="client-messages.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-comment mr-3"></i>
+                    Messages
+                </a>
+                <a href="client-profile.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-user mr-3"></i>
+                    Profile
+                </a>
+                <a href="client-pay.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-credit-card mr-3"></i>
+                    Payments
+                </a>
+                <a href="login.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-sign-out-alt mr-3"></i>
+                    Logout
+                </a>
+            </div>
+
+            <!-- Main Content -->
+            <main class="flex-1 overflow-auto p-6">
+                <div class="mb-6">
+                    <h1 class="text-2xl font-bold text-white">Post a New Project</h1>
+                    <p class="text-gray-400">Fill in the details below to post your project and find the perfect freelancer.</p>
+                </div>
+
+                <div class="card p-6">
+                    <form>
+                        <div class="space-y-6">
+                            <!-- Project Title -->
+                            <div>
+                                <label for="title" class="block text-sm font-medium text-gray-300 mb-1">Project Title</label>
+                                <input type="text" id="title" name="title" class="w-full bg-black border-gray-800 rounded-md py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 text-white" placeholder="E.g., Website Redesign, Mobile App Development">
+                            </div>
+
+                            <!-- Project Category -->
+                            <div>
+                                <label for="category" class="block text-sm font-medium text-gray-300 mb-1">Category</label>
+                                <select id="category" name="category" class="w-full bg-black border-gray-800 rounded-md py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 text-white">
+                                    <option value="">Select a category</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="mobile-development">Mobile Development</option>
+                                    <option value="ui-ux-design">UI/UX Design</option>
+                                    <option value="graphic-design">Graphic Design</option>
+                                    <option value="content-writing">Content Writing</option>
+                                    <option value="digital-marketing">Digital Marketing</option>
+                                    <option value="data-analysis">Data Analysis</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Project Description -->
+                            <div>
+                                <label for="description" class="block text-sm font-medium text-gray-300 mb-1">Project Description</label>
+                                <textarea id="description" name="description" rows="5" class="w-full bg-black border-gray-800 rounded-md py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 text-white" placeholder="Describe your project requirements in detail..."></textarea>
+                            </div>
+                            
+                            <!-- Skills Required -->
+                            <div>
+                                <label for="skills" class="block text-sm font-medium text-gray-300 mb-1">Skills Required</label>
+                                <input type="text" id="skills" name="skills" class="w-full bg-black border-gray-800 rounded-md py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 text-white" placeholder="E.g., HTML, CSS, JavaScript, Figma">
+                                <p class="mt-1 text-sm text-gray-500">Enter skills separated by commas. These will help our AI match the right freelancers.</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <!-- Project Budget -->
+                                <div>
+                                    <label for="budget" class="block text-sm font-medium text-gray-300 mb-1">Budget ($)</label>
+                                    <input type="number" id="budget" name="budget" min="0" class="w-full bg-black border-gray-800 rounded-md py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 text-white" placeholder="Enter amount in USD">
+                                </div>
+
+                                <!-- Project Duration -->
+                                <div>
+                                    <label for="duration" class="block text-sm font-medium text-gray-300 mb-1">Duration</label>
+                                    <div class="flex rounded-md shadow-sm">
+                                        <input type="number" id="duration" name="duration" min="1" class="flex-1 w-full bg-black border-gray-800 rounded-l-md border py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 text-white" placeholder="Duration">
+                                        <select name="duration_unit" class="bg-gray-900 text-gray-300 inline-flex items-center px-3 border border-l-0 border-gray-800 rounded-r-md">
+                                            <option value="days">Days</option>
+                                            <option value="weeks">Weeks</option>
+                                            <option value="months">Months</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Deadline -->
+                                <div>
+                                    <label for="deadline" class="block text-sm font-medium text-gray-300 mb-1">Deadline</label>
+                                    <input type="date" id="deadline" name="deadline" class="w-full bg-black border-gray-800 rounded-md py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 text-white">
+                                </div>
+                            </div>
+
+                            <!-- Attachments -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1">Attachments</label>
+                                <div class="flex justify-center px-6 pt-5 pb-6 border-2 border-gray-800 border-dashed rounded-md">
+                                    <div class="space-y-1 text-center">
+                                        <svg class="mx-auto h-12 w-12 text-gray-500" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                            <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <div class="flex text-sm text-gray-400">
+                                            <label for="file-upload" class="relative cursor-pointer bg-black rounded-md font-medium text-indigo-500 hover:text-indigo-400 focus-within:outline-none">
+                                                <span>Upload a file</span>
+                                                <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                            </label>
+                                            <p class="pl-1">or drag and drop</p>
+                                        </div>
+                                        <p class="text-xs text-gray-500">PNG, JPG, PDF up to 10MB</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pt-5">
+                                <div class="flex justify-end">
+                                    <button type="button" class="bg-gray-800 py-2 px-4 border border-gray-800 rounded-md shadow-sm text-sm font-medium text-gray-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 mr-3">
+                                        Save as Draft
+                                    </button>
+                                    <button type="submit" class="bg-indigo-600 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Post Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

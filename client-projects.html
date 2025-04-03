@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigHub - My Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white client-theme">
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <nav class="navbar px-4 py-3 flex items-center justify-between border-b border-gray-800">
+            <div class="flex items-center">
+                <a href="client-dashboard.html" class="text-2xl font-bold text-indigo-600">GigHub</a>
+                <span class="ml-2 bg-indigo-900 px-2 py-1 rounded text-xs text-white">Client</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <div class="relative">
+                    <button class="flex items-center text-sm font-medium text-gray-300 hover:text-white">
+                        <!-- <img src="/api/placeholder/30/30" alt="Profile" class="h-8 w-8 rounded-full mr-2"> -->
+                        <span>John</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <div class="sidebar w-64 px-3 py-4 flex flex-col">
+                <a href="client-dashboard.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-home mr-3"></i>
+                    Dashboard
+                </a>
+                <a href="client-projects.html" class="menu-item active py-2 px-4">
+                    <i class="fas fa-project-diagram mr-3"></i>
+                    My Projects
+                </a>
+                <a href="post-project.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-plus-circle mr-3"></i>
+                    Post New Project
+                </a>
+                <a href="client-messages.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-comment mr-3"></i>
+                    Messages
+                </a>
+                <a href="client-profile.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-user mr-3"></i>
+                    Profile
+                </a>
+                <a href="client-pay.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-credit-card mr-3"></i>
+                    Payments
+                </a>
+                <a href="login.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-sign-out-alt mr-3"></i>
+                    Logout
+                </a>
+            </div>
+
+            <!-- Main Content -->
+            <main class="flex-1 overflow-auto p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <h1 class="text-2xl font-bold text-white">My Projects</h1>
+                        <p class="text-gray-400">Manage all your projects</p>
+                    </div>
+                    <a href="post-project.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium flex items-center">
+                        <i class="fas fa-plus mr-2"></i> Post New Project
+                    </a>
+                </div>
+
+                <!-- Project Filters -->
+                <div class="card p-4 mb-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center space-y-3 md:space-y-0">
+                        <div class="flex items-center space-x-2">
+                            <button class="bg-indigo-900 text-indigo-500 px-3 py-1 rounded-full text-sm font-medium">All Projects</button>
+                            <button class="text-gray-400 hover:bg-gray-800 px-3 py-1 rounded-full text-sm font-medium">Active</button>
+                            <button class="text-gray-400 hover:bg-gray-800 px-3 py-1 rounded-full text-sm font-medium">Completed</button>
+                            <button class="text-gray-400 hover:bg-gray-800 px-3 py-1 rounded-full text-sm font-medium">Draft</button>
+                        </div>
+                        <div class="relative">
+                            <input type="text" placeholder="Search projects..." class="pl-10 pr-4 py-2 bg-black border border-gray-800 rounded-md w-full md:w-64 text-white">
+                            <div class="absolute left-3 top-2.5 text-gray-400">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects List -->
+                <div class="card overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Project</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Freelancer</th>
+                                    <th scope="col">Posted Date</th>
+                                    <th scope="col">Deadline</th>
+                                    <th scope="col" class="text-right">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-800">
+                                <tr>
+                                    <td class="py-4">
+                                        <div class="text-sm font-medium text-white">E-commerce Website Redesign</div>
+                                        <div class="text-sm text-gray-400">Budget: $2,500</div>
+                                    </td>
+                                    <td class="py-4">
+                                        <span class="status-progress">In Progress</span>
+                                    </td>
+                                    <td class="py-4">
+                                        <div class="text-sm text-gray-400">Awaiting assignment</div>
+                                    </td>
+                                    <td class="py-4 text-sm text-gray-400">
+                                        Apr 2, 2025
+                                    </td>
+                                    <td class="py-4 text-sm text-gray-400">
+                                        May 15, 2025
+                                    </td>
+                                    <td class="py-4 text-right text-sm font-medium">
+                                        <a href="client-project-details.html" class="text-indigo-500 hover:text-indigo-400 mr-3">View</a>
+                                        <a href="#" class="text-gray-400 hover:text-gray-300">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4">
+                                        <div class="text-sm font-medium text-white">Mobile App Development</div>
+                                        <div class="text-sm text-gray-400">Budget: $5,000</div>
+                                    </td>
+                                    <td class="py-4">
+                                        <span class="status-completed">Completed</span>
+                                    </td>
+                                    <td class="py-4">
+                                        <div class="flex items-center">
+                                            <img src="/api/placeholder/24/24" alt="Freelancer" class="h-6 w-6 rounded-full mr-2">
+                                            <div class="text-sm text-gray-300">Alex Turner</div>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 text-sm text-gray-400">
+                                        Feb 15, 2025
+                                    </td>
+                                    <td class="py-4 text-sm text-gray-400">
+                                        Mar 30, 2025
+                                    </td>
+                                    <td class="py-4 text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-500 hover:text-indigo-400 mr-3">View</a>
+                                        <a href="#" class="text-gray-600 cursor-not-allowed">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4">
+                                        <div class="text-sm font-medium text-white">Content Writing for Blog</div>
+                                        <div class="text-sm text-gray-400">Budget: $800</div>
+                                    </td>
+                                    <td class="py-4">
+                                        <span class="status-progress">In Progress</span>
+                                    </td>
+                                    <td class="py-4">
+                                        <div class="flex items-center">
+                                            <img src="/api/placeholder/24/24" alt="Freelancer" class="h-6 w-6 rounded-full mr-2">
+                                            <div class="text-sm text-gray-300">Emily Watson</div>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 text-sm text-gray-400">
+                                        Mar 10, 2025
+                                    </td>
+                                    <td class="py-4 text-sm text-gray-400">
+                                        Apr 20, 2025
+                                    </td>
+                                    <td class="py-4 text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-500 hover:text-indigo-400 mr-3">View</a>
+                                        <a href="#" class="text-gray-400 hover:text-gray-300">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4">
+                                        <div class="text-sm font-medium text-white">Logo Design</div>
+                                        <div class="text-sm text-gray-400">Budget: $350</div>
+                                    </td>
+                                    <td class="py-4">
+                                        <span class="status-draft">Draft</span>
+                                    </td>
+                                    <td class="py-4">
+                                        <div class="text-sm text-gray-400">Not assigned</div>
+                                    </td>
+                                    <td class="py-4 text-sm text-gray-400">
+                                        -
+                                    </td>
+                                    <td class="py-4 text-sm text-gray-400">
+                                        -
+                                    </td>
+                                    <td class="py-4 text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-500 hover:text-indigo-400 mr-3">Publish</a>
+                                        <a href="#" class="text-gray-400 hover:text-gray-300">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4">
+                                        <div class="text-sm font-medium text-white">SEO Optimization</div>
+                                        <div class="text-sm text-gray-400">Budget: $1,200</div>
+                                    </td>
+                                    <td class="py-4">
+                                        <span class="status-completed">Completed</span>
+                                    </td>
+                                    <td class="py-4">
+                                        <div class="flex items-center">
+                                            <img src="/api/placeholder/24/24" alt="Freelancer" class="h-6 w-6 rounded-full mr-2">
+                                            <div class="text-sm text-gray-300">Robert Lee</div>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 text-sm text-gray-400">
+                                        Jan 20, 2025
+                                    </td>
+                                    <td class="py-4 text-sm text-gray-400">
+                                        Feb 28, 2025
+                                    </td>
+                                    <td class="py-4 text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-500 hover:text-indigo-400 mr-3">View</a>
+                                        <a href="#" class="text-gray-600 cursor-not-allowed">Edit</a>
+                                    </td>
+                                </tr>
+                                <!-- Project Row for E-commerce Website Redesign -->
+                                <tr class="border-b border-gray-800">
+                                    <td class="px-4 py-4">
+                                        <div class="flex items-center">
+                                            <div>
+                                                <h4 class="font-medium text-white">E-commerce Website Redesign</h4>
+                                                <p class="text-sm text-gray-400">Assigned to: Alex Morgan</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-center">
+                                        <span class="px-2 py-1 text-xs rounded-full bg-yellow-900/30 text-yellow-500">Awaiting Approval</span>
+                                    </td>
+                                    <td class="px-4 py-4 text-center text-gray-400">May 10, 2023</td>
+                                    <td class="px-4 py-4 text-center text-gray-400">-</td>
+                                    <td class="px-4 py-4 text-center text-gray-400">$8,500</td>
+                                    <td class="px-4 py-4 text-right">
+                                        <a href="client-project-details.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1 rounded text-sm">View</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bg-black px-4 py-3 border-t border-gray-800 sm:px-6">
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-400">
+                                Showing <span class="font-medium text-white">1</span> to <span class="font-medium text-white">5</span> of <span class="font-medium text-white">12</span> projects
+                            </div>
+                            <div class="flex-1 flex justify-end">
+                                <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                                    <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-800 bg-black text-sm font-medium text-gray-400 hover:bg-gray-800">
+                                        <span class="sr-only">Previous</span>
+                                        <i class="fas fa-chevron-left"></i>
+                                    </a>
+                                    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-800 bg-indigo-900 text-sm font-medium text-indigo-500 hover:bg-indigo-800">1</a>
+                                    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-800 bg-black text-sm font-medium text-gray-400 hover:bg-gray-800">2</a>
+                                    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-800 bg-black text-sm font-medium text-gray-400 hover:bg-gray-800">3</a>
+                                    <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-800 bg-black text-sm font-medium text-gray-400 hover:bg-gray-800">
+                                        <span class="sr-only">Next</span>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

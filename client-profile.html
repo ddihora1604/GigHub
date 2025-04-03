@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigHub - My Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white client-theme">
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <nav class="navbar px-4 py-3 flex items-center justify-between border-b border-gray-800">
+            <div class="flex items-center">
+                <a href="client-dashboard.html" class="text-2xl font-bold text-indigo-600">GigHub</a>
+                <span class="ml-2 bg-indigo-900 px-2 py-1 rounded text-xs text-white">Client</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <div class="relative">
+                    <button class="flex items-center text-sm font-medium text-gray-300 hover:text-white">
+                        <!-- <img src="/api/placeholder/30/30" alt="Profile" class="h-8 w-8 rounded-full mr-2"> -->
+                        <span>John</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <div class="sidebar w-64 px-3 py-4 flex flex-col">
+                <a href="client-dashboard.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-home mr-3"></i>
+                    Dashboard
+                </a>
+                <a href="client-projects.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-project-diagram mr-3"></i>
+                    My Projects
+                </a>
+                <a href="post-project.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-plus-circle mr-3"></i>
+                    Post New Project
+                </a>
+                <a href="client-messages.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-comment mr-3"></i>
+                    Messages
+                </a>
+                <a href="client-profile.html" class="menu-item active py-2 px-4">
+                    <i class="fas fa-user mr-3"></i>
+                    Profile
+                </a>
+                <a href="client-pay.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-credit-card mr-3"></i>
+                    Payments
+                </a>
+                <a href="login.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-sign-out-alt mr-3"></i>
+                    Logout
+                </a>
+            </div>
+
+            <!-- Main Content -->
+            <main class="flex-1 overflow-auto p-6">
+                <!-- Page Header -->
+                <div class="mb-6">
+                    <h1 class="text-2xl font-bold text-white">My Profile</h1>
+                    <p class="text-gray-400">Manage your personal information and preferences</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Left Column - Profile Summary & Account Info -->
+                    <div class="lg:col-span-1 space-y-6">
+                        <!-- Profile Card -->
+                        <div class="card p-6 text-center">
+                            <div class="relative mx-auto w-32 h-32 mb-4">
+                                <div class="w-full h-full rounded-full bg-indigo-600 flex items-center justify-center text-white text-5xl font-bold">
+                                    JS
+                                </div>
+                                <button class="absolute right-0 bottom-0 bg-indigo-900 text-white p-2 rounded-full border-2 border-black">
+                                    <i class="fas fa-camera"></i>
+                                </button>
+                            </div>
+                            <h2 class="text-xl font-bold text-white">John Smith</h2>
+                            <p class="text-gray-400">Product Manager</p>
+                            <div class="mt-3">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-900 text-indigo-500">
+                                    <i class="fas fa-star mr-1"></i> Premium Member
+                                </span>
+                            </div>
+                            <div class="mt-4 flex justify-center space-x-2">
+                                <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                                    <i class="fas fa-edit mr-1"></i> Edit Profile
+                                </button>
+                                <button class="bg-gray-800 hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
+                                    <i class="fas fa-eye"></i> Preview
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Account Information -->
+                        <div class="card p-6">
+                            <h3 class="text-lg font-medium text-white mb-4">Account Information</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center text-gray-400">
+                                    <i class="fas fa-envelope w-6"></i>
+                                    <span class="ml-3">johnsmith@example.com</span>
+                                </div>
+                                <div class="flex items-center text-gray-400">
+                                    <i class="fas fa-phone w-6"></i>
+                                    <span class="ml-3">+1 (555) 123-4567</span>
+                                </div>
+                                <div class="flex items-center text-gray-400">
+                                    <i class="fas fa-map-marker-alt w-6"></i>
+                                    <span class="ml-3">San Francisco, CA, USA</span>
+                                </div>
+                                <div class="flex items-center text-gray-400">
+                                    <i class="fas fa-clock w-6"></i>
+                                    <span class="ml-3">Member since: Jan 2023</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Account Stats -->
+                        <div class="card p-6">
+                            <h3 class="text-lg font-medium text-white mb-4">Account Stats</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-500">15</div>
+                                    <div class="text-sm text-gray-400">Projects</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-500">8</div>
+                                    <div class="text-sm text-gray-400">Active Projects</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-500">24</div>
+                                    <div class="text-sm text-gray-400">Completed</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-indigo-500">4.8</div>
+                                    <div class="text-sm text-gray-400">Avg. Rating</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Profile Information -->
+                    <div class="lg:col-span-2">
+                        <div class="card p-6">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 class="text-lg font-medium text-white">Profile Information</h3>
+                                <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">
+                                    Save Changes
+                                </button>
+                            </div>
+
+                            <form>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                    <!-- First Name -->
+                                    <div>
+                                        <label for="first-name" class="block text-sm font-medium text-gray-300 mb-1">First Name</label>
+                                        <input type="text" id="first-name" value="John" class="w-full px-3 py-2 bg-black border border-gray-800 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white">
+                                    </div>
+                                    
+                                    <!-- Last Name -->
+                                    <div>
+                                        <label for="last-name" class="block text-sm font-medium text-gray-300 mb-1">Last Name</label>
+                                        <input type="text" id="last-name" value="Smith" class="w-full px-3 py-2 bg-black border border-gray-800 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white">
+                                    </div>
+
+                                    <!-- Email Address -->
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                                        <input type="email" id="email" value="johnsmith@example.com" class="w-full px-3 py-2 bg-black border border-gray-800 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white">
+                                    </div>
+
+                                    <!-- Phone Number -->
+                                    <div>
+                                        <label for="phone" class="block text-sm font-medium text-gray-300 mb-1">Phone Number</label>
+                                        <input type="tel" id="phone" value="+1 (555) 123-4567" class="w-full px-3 py-2 bg-black border border-gray-800 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white">
+                                    </div>
+
+                                    <!-- Company Name -->
+                                    <div>
+                                        <label for="company" class="block text-sm font-medium text-gray-300 mb-1">Company Name</label>
+                                        <input type="text" id="company" value="TechInnovate Inc." class="w-full px-3 py-2 bg-black border border-gray-800 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white">
+                                    </div>
+
+                                    <!-- Position/Title -->
+                                    <div>
+                                        <label for="position" class="block text-sm font-medium text-gray-300 mb-1">Position/Title</label>
+                                        <input type="text" id="position" value="Product Manager" class="w-full px-3 py-2 bg-black border border-gray-800 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white">
+                                    </div>
+
+                                    <!-- Location -->
+                                    <div>
+                                        <label for="location" class="block text-sm font-medium text-gray-300 mb-1">Location</label>
+                                        <input type="text" id="location" value="San Francisco, CA, USA" class="w-full px-3 py-2 bg-black border border-gray-800 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white">
+                                    </div>
+
+                                    <!-- Website -->
+                                    <div>
+                                        <label for="website" class="block text-sm font-medium text-gray-300 mb-1">Website</label>
+                                        <input type="url" id="website" value="https://techinnovate.com" class="w-full px-3 py-2 bg-black border border-gray-800 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white">
+                                    </div>
+                                </div>
+
+                                <!-- Bio/Description -->
+                                <div class="mb-6">
+                                    <label for="bio" class="block text-sm font-medium text-gray-300 mb-1">Bio/Description</label>
+                                    <textarea id="bio" rows="5" class="w-full px-3 py-2 bg-black border border-gray-800 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white">Product Manager with over 8 years of experience in tech industry. Focused on delivering high-quality digital products and services that solve real business problems.</textarea>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Account Settings -->
+                        <div class="card p-6 mt-6">
+                            <h3 class="text-lg font-medium text-white mb-6">Account Settings</h3>
+                            
+                            <!-- Password Change -->
+                            <div class="mb-6 border-b border-gray-800 pb-6">
+                                <h4 class="text-base font-medium text-white mb-4">Password</h4>
+                                <button class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded text-sm">
+                                    Change Password
+                                </button>
+                            </div>
+                            
+                            <!-- Notifications -->
+                            <div class="mb-6 border-b border-gray-800 pb-6">
+                                <h4 class="text-base font-medium text-white mb-4">Notifications</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <div class="text-sm font-medium text-white">Email Notifications</div>
+                                            <div class="text-xs text-gray-400">Receive notifications about your projects and messages</div>
+                                        </div>
+                                        <label class="inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" value="" class="sr-only peer" checked>
+                                            <div class="relative w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                                        </label>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <div class="text-sm font-medium text-white">Project Updates</div>
+                                            <div class="text-xs text-gray-400">Receive updates about your active projects</div>
+                                        </div>
+                                        <label class="inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" value="" class="sr-only peer" checked>
+                                            <div class="relative w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                                        </label>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <div class="text-sm font-medium text-white">Marketing Emails</div>
+                                            <div class="text-xs text-gray-400">Receive marketing emails and promotions</div>
+                                        </div>
+                                        <label class="inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" value="" class="sr-only peer">
+                                            <div class="relative w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Account Deletion -->
+                            <div>
+                                <h4 class="text-base font-medium text-white mb-4">Delete Account</h4>
+                                <p class="text-sm text-gray-400 mb-4">Once you delete your account, there is no going back. Please be certain.</p>
+                                <button class="bg-red-800 hover:bg-red-700 text-white px-4 py-2 rounded text-sm">
+                                    Delete Account
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html> 

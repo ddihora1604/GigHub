@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigHub - Project Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white client-theme">
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <nav class="navbar px-4 py-3 flex items-center justify-between border-b border-gray-800">
+            <div class="flex items-center">
+                <a href="client-dashboard.html" class="text-2xl font-bold text-indigo-600">GigHub</a>
+                <span class="ml-2 bg-indigo-900 px-2 py-1 rounded text-xs text-white">Client</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <div class="relative">
+                    <button class="flex items-center text-sm font-medium text-gray-300 hover:text-white">
+                        <!-- <img src="/api/placeholder/30/30" alt="Profile" class="h-8 w-8 rounded-full mr-2"> -->
+                        <span>John</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <div class="sidebar w-64 px-3 py-4 flex flex-col">
+                <a href="client-dashboard.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-home mr-3"></i>
+                    Dashboard
+                </a>
+                <a href="client-projects.html" class="menu-item active py-2 px-4">
+                    <i class="fas fa-project-diagram mr-3"></i>
+                    My Projects
+                </a>
+                <a href="post-project.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-plus-circle mr-3"></i>
+                    Post New Project
+                </a>
+                <a href="client-messages.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-comment mr-3"></i>
+                    Messages
+                </a>
+                <a href="client-profile.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-user mr-3"></i>
+                    Profile
+                </a>
+                <a href="client-pay.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-credit-card mr-3"></i>
+                    Payments
+                </a>
+                <a href="login.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-sign-out-alt mr-3"></i>
+                    Logout
+                </a>
+            </div>
+
+            <!-- Main Content -->
+            <main class="flex-1 overflow-auto p-6">
+                <!-- Breadcrumbs -->
+                <div class="flex items-center text-sm text-gray-500 mb-4">
+                    <a href="client-projects.html" class="hover:text-indigo-500">Projects</a>
+                    <span class="mx-2">/</span>
+                    <a href="#" class="hover:text-indigo-500">E-commerce Website Redesign</a>
+                    <span class="mx-2">/</span>
+                    <span class="text-gray-400">Review</span>
+                </div>
+
+                <!-- Alert Banner -->
+                <div class="bg-yellow-900/30 border-l-4 border-yellow-500 text-yellow-200 p-4 mb-6 flex items-start">
+                    <i class="fas fa-exclamation-circle text-yellow-500 mt-0.5 mr-3"></i>
+                    <p>This project is awaiting your review. Please review the project details and approve the contract to begin work.</p>
+                </div>
+
+                <!-- Project Header -->
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h1 class="text-3xl font-bold text-white mb-2">E-commerce Website Redesign</h1>
+                        <div class="flex items-center">
+                            <p class="text-gray-400">Freelancer: Alex Morgan</p>
+                            <span class="ml-4 px-3 py-1 bg-yellow-900/50 text-yellow-500 text-xs font-medium rounded">Awaiting Approval</span>
+                        </div>
+                    </div>
+                    <a href="client-messages.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded flex items-center">
+                        <i class="fas fa-comment mr-2"></i> Message Freelancer
+                    </a>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="border-b border-gray-800 mb-6">
+                    <nav class="flex">
+                        <a href="#contract" class="tab-link px-4 py-3 text-indigo-500 border-b-2 border-indigo-500 font-medium">Contract</a>
+                        <a href="#about-project" class="tab-link px-4 py-3 text-gray-500 hover:text-gray-300">About Project</a>
+                        <a href="#about-freelancer" class="tab-link px-4 py-3 text-gray-500 hover:text-gray-300">About Freelancer</a>
+                    </nav>
+                </div>
+
+                <!-- Tab Contents -->
+                <div id="tab-contents">
+                    <!-- Contract Tab (Initially Visible) -->
+                    <div id="contract" class="tab-content">
+                        <!-- Contract Details -->
+                        <div class="card p-6 mb-6">
+                            <h2 class="text-xl font-semibold text-white mb-4">Contract Details</h2>
+                            <p class="text-gray-400 mb-6">Please review the following contract details before approving</p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                                <!-- Project Terms -->
+                                <div>
+                                    <h3 class="text-lg font-medium text-indigo-400 mb-4">Project Terms</h3>
+                                    
+                                    <div class="space-y-4">
+                                        <div>
+                                            <p class="text-gray-500 text-sm">Project Type</p>
+                                            <p class="text-white">Fixed Price</p>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-gray-500 text-sm">Total Budget</p>
+                                            <p class="text-white">$8,500</p>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-gray-500 text-sm">Duration</p>
+                                            <p class="text-white">3 months (May 10 - Aug 10, 2023)</p>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-gray-500 text-sm">Payment Schedule</p>
+                                            <p class="text-white">Milestone-based (5 payments)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Payment Milestones -->
+                                <div>
+                                    <h3 class="text-lg font-medium text-indigo-400 mb-4">Payment Milestones</h3>
+                                    
+                                    <div class="space-y-4">
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <p class="text-white">Requirements Gathering</p>
+                                                <p class="text-gray-500 text-sm">Due: May 12, 2023</p>
+                                            </div>
+                                            <p class="text-white font-medium">$1,000</p>
+                                        </div>
+                                        
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <p class="text-white">Wireframing & Design</p>
+                                                <p class="text-gray-500 text-sm">Due: May 30, 2023</p>
+                                            </div>
+                                            <p class="text-white font-medium">$2,000</p>
+                                        </div>
+                                        
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <p class="text-white">Frontend Development</p>
+                                                <p class="text-gray-500 text-sm">Due: June 25, 2023</p>
+                                            </div>
+                                            <p class="text-white font-medium">$2,500</p>
+                                        </div>
+                                        
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <p class="text-white">Backend Integration</p>
+                                                <p class="text-gray-500 text-sm">Due: July 15, 2023</p>
+                                            </div>
+                                            <p class="text-white font-medium">$2,000</p>
+                                        </div>
+                                        
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <p class="text-white">Testing & Launch</p>
+                                                <p class="text-gray-500 text-sm">Due: August 5, 2023</p>
+                                            </div>
+                                            <p class="text-white font-medium">$1,000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Deliverables -->
+                        <div class="card p-6 mb-6">
+                            <h2 class="text-xl font-semibold text-white mb-4">Deliverables</h2>
+                            
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li>Complete UI/UX redesign with focus on modern aesthetics and user experience</li>
+                                <li>Responsive designs for mobile, tablet, and desktop</li>
+                                <li>Interactive product catalog with advanced filtering</li>
+                                <li>User account management system</li>
+                                <li>Admin dashboard for content management</li>
+                                <li>Integration with existing payment and inventory systems</li>
+                                <li>SEO optimization for product pages</li>
+                                <li>Performance optimization for fast page loads</li>
+                                <li>Complete documentation and handover</li>
+                            </ul>
+                        </div>
+
+                        <!-- Approval Actions -->
+                        <div class="flex justify-end space-x-4">
+                            <button class="px-6 py-3 bg-transparent border border-gray-700 text-gray-300 rounded-md hover:bg-gray-800 transition">
+                                Request Changes
+                            </button>
+                            <button id="approveContractBtn" class="px-6 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition">
+                                Approve Contract
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- About Project Tab (Initially Hidden) -->
+                    <div id="about-project" class="tab-content hidden">
+                        <!-- Project Description -->
+                        <div class="card p-6 mb-6">
+                            <h2 class="text-xl font-semibold text-white mb-4">Project Description</h2>
+                            
+                            <p class="text-gray-300 mb-6">
+                                Complete redesign of your e-commerce website to improve user experience, increase conversions, and modernize your brand's digital presence. The project includes a new responsive design, improved product categorization, enhanced search functionality, and integration with your inventory management system.
+                            </p>
+                            
+                            <!-- Project Goals -->
+                            <h3 class="text-lg font-medium text-indigo-400 mb-3">Project Goals:</h3>
+                            <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                                <li>Increase mobile conversion rate by at least 25%</li>
+                                <li>Reduce cart abandonment rate by 15%</li>
+                                <li>Improve site loading speed by at least 40%</li>
+                                <li>Modernize brand imagery and user interface</li>
+                                <li>Streamline inventory management through improved integrations</li>
+                            </ul>
+                            
+                            <!-- Timeline Overview -->
+                            <h3 class="text-lg font-medium text-indigo-400 mb-3">Timeline Overview:</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 bg-indigo-600 rounded-full h-8 w-8 flex items-center justify-center text-white font-medium text-sm">
+                                        1
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-white font-medium">Phase 1: Research & Planning</h4>
+                                        <p class="text-gray-400 text-sm">May 10 - May 12, 2023</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 bg-indigo-600 rounded-full h-8 w-8 flex items-center justify-center text-white font-medium text-sm">
+                                        2
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-white font-medium">Phase 2: Design & Mockups</h4>
+                                        <p class="text-gray-400 text-sm">May 13 - May 30, 2023</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 bg-indigo-600 rounded-full h-8 w-8 flex items-center justify-center text-white font-medium text-sm">
+                                        3
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-white font-medium">Phase 3: Frontend Development</h4>
+                                        <p class="text-gray-400 text-sm">June 1 - June 25, 2023</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 bg-indigo-600 rounded-full h-8 w-8 flex items-center justify-center text-white font-medium text-sm">
+                                        4
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-white font-medium">Phase 4: Backend Integration</h4>
+                                        <p class="text-gray-400 text-sm">June 26 - July 15, 2023</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 bg-indigo-600 rounded-full h-8 w-8 flex items-center justify-center text-white font-medium text-sm">
+                                        5
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-white font-medium">Phase 5: Testing & Launch</h4>
+                                        <p class="text-gray-400 text-sm">July 16 - August 5, 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Milestones & Tasks -->
+                        <div class="card p-6">
+                            <h2 class="text-xl font-semibold text-white mb-4">Milestones & Tasks</h2>
+                            <p class="text-gray-400 mb-6">Project tasks to be completed by the freelancer</p>
+                            
+                            <div class="relative">
+                                <div class="absolute left-4 top-0 h-full w-0.5 bg-indigo-900/70"></div>
+                                
+                                <div class="relative pl-12 pb-8">
+                                    <div class="absolute left-0 rounded-full h-8 w-8 bg-green-900 border-4 border-green-500 flex items-center justify-center">
+                                        <i class="fas fa-check text-green-500 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between">
+                                            <h3 class="text-white font-medium">Requirements Gathering</h3>
+                                            <span class="text-green-500">Completed</span>
+                                        </div>
+                                        <p class="text-gray-400 text-sm">Collected all client requirements and finalized project scope</p>
+                                        <p class="text-gray-500 text-xs mt-1">Completed on: May 12, 2023</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="relative pl-12 pb-8">
+                                    <div class="absolute left-0 rounded-full h-8 w-8 bg-green-900 border-4 border-green-500 flex items-center justify-center">
+                                        <i class="fas fa-check text-green-500 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between">
+                                            <h3 class="text-white font-medium">Wireframing & Design</h3>
+                                            <span class="text-green-500">Completed</span>
+                                        </div>
+                                        <p class="text-gray-400 text-sm">Created wireframes and design mockups for all pages</p>
+                                        <p class="text-gray-500 text-xs mt-1">Completed on: May 30, 2023</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="relative pl-12 pb-8">
+                                    <div class="absolute left-0 rounded-full h-8 w-8 bg-indigo-600 flex items-center justify-center">
+                                        <i class="fas fa-spinner fa-spin text-white text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between">
+                                            <h3 class="text-white font-medium">Frontend Development</h3>
+                                            <span class="text-indigo-500">In Progress (65%)</span>
+                                        </div>
+                                        <p class="text-gray-400 text-sm">Implementing responsive HTML/CSS/JS based on approved designs</p>
+                                        <div class="w-full h-1.5 bg-gray-800 rounded-full mt-2 overflow-hidden">
+                                            <div class="bg-indigo-600 h-full rounded-full" style="width: 65%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="relative pl-12 pb-8">
+                                    <div class="absolute left-0 rounded-full h-8 w-8 bg-gray-800 border border-gray-700 flex items-center justify-center">
+                                        <span class="text-gray-500 text-xs">4</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-white font-medium">Backend Integration</h3>
+                                        <p class="text-gray-400 text-sm">Integrating the frontend with your existing systems and databases</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="relative pl-12">
+                                    <div class="absolute left-0 rounded-full h-8 w-8 bg-gray-800 border border-gray-700 flex items-center justify-center">
+                                        <span class="text-gray-500 text-xs">5</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-white font-medium">Testing & Launch</h3>
+                                        <p class="text-gray-400 text-sm">Final testing, optimization, and site launch</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- About Freelancer Tab (Initially Hidden) -->
+                    <div id="about-freelancer" class="tab-content hidden">
+                        <!-- Freelancer Profile -->
+                        <div class="card p-6 mb-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mr-6">
+                                    <!-- Freelancer Image -->
+                                    <div class="w-28 h-28 bg-indigo-900/30 rounded-full flex items-center justify-center text-indigo-500 text-2xl font-bold">
+                                        AM
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-1">
+                                    <!-- Freelancer Header -->
+                                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                                        <div>
+                                            <h2 class="text-xl font-semibold text-white mb-1">Alex Morgan</h2>
+                                            <p class="text-gray-400">UI/UX Designer & Frontend Developer</p>
+                                        </div>
+                                        
+                                        <div class="flex items-center mt-2 md:mt-0">
+                                            <div class="flex items-center mr-4">
+                                                <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                                <span class="font-medium text-white">4.9</span>
+                                                <span class="text-gray-500 ml-1">(48 reviews)</span>
+                                            </div>
+                                            <div class="px-3 py-1 bg-indigo-900/30 text-indigo-500 rounded-full text-sm font-medium">
+                                                Top Rated
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Freelancer Bio -->
+                                    <div class="mb-6">
+                                        <h3 class="text-lg font-medium text-indigo-400 mb-2">About</h3>
+                                        <p class="text-gray-300">
+                                            I'm a UI/UX designer and frontend developer with over 5 years of experience creating beautiful, intuitive interfaces for e-commerce platforms. My approach combines data-driven design thinking with modern aesthetics to create websites that not only look great but also convert visitors into customers.
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Key Info -->
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                                        <div>
+                                            <p class="text-gray-500 text-sm">Location</p>
+                                            <p class="text-white">Boston, USA</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-gray-500 text-sm">Member Since</p>
+                                            <p class="text-white">March 2019</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-gray-500 text-sm">Projects Completed</p>
+                                            <p class="text-white">86</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-gray-500 text-sm">Languages</p>
+                                            <p class="text-white">English, Spanish</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Skills -->
+                                    <div>
+                                        <h3 class="text-lg font-medium text-indigo-400 mb-3">Skills</h3>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-3 py-1 bg-indigo-900/30 text-indigo-500 rounded-full text-sm">UI/UX Design</span>
+                                            <span class="px-3 py-1 bg-indigo-900/30 text-indigo-500 rounded-full text-sm">Figma</span>
+                                            <span class="px-3 py-1 bg-indigo-900/30 text-indigo-500 rounded-full text-sm">HTML/CSS</span>
+                                            <span class="px-3 py-1 bg-indigo-900/30 text-indigo-500 rounded-full text-sm">JavaScript</span>
+                                            <span class="px-3 py-1 bg-indigo-900/30 text-indigo-500 rounded-full text-sm">React</span>
+                                            <span class="px-3 py-1 bg-indigo-900/30 text-indigo-500 rounded-full text-sm">Responsive Design</span>
+                                            <span class="px-3 py-1 bg-indigo-900/30 text-indigo-500 rounded-full text-sm">E-commerce</span>
+                                            <span class="px-3 py-1 bg-indigo-900/30 text-indigo-500 rounded-full text-sm">Wireframing</span>
+                                            <span class="px-3 py-1 bg-indigo-900/30 text-indigo-500 rounded-full text-sm">Prototyping</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Recent Work -->
+                        <div class="card p-6 mb-6">
+                            <h2 class="text-xl font-semibold text-white mb-4">Portfolio Highlights</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <!-- Project 1 -->
+                                <div class="border border-gray-800 rounded-lg overflow-hidden">
+                                    <div class="h-48 bg-gray-800 flex items-center justify-center text-gray-600">
+                                        <i class="fas fa-image text-4xl"></i>
+                                    </div>
+                                    <div class="p-4">
+                                        <h3 class="font-medium text-white mb-1">LuxHome E-commerce Redesign</h3>
+                                        <p class="text-gray-400 text-sm mb-2">Complete redesign of a luxury home goods website.</p>
+                                        <div class="flex flex-wrap gap-1 mt-2">
+                                            <span class="px-2 py-0.5 bg-gray-800 text-gray-400 rounded text-xs">UI/UX</span>
+                                            <span class="px-2 py-0.5 bg-gray-800 text-gray-400 rounded text-xs">React</span>
+                                            <span class="px-2 py-0.5 bg-gray-800 text-gray-400 rounded text-xs">E-commerce</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Project 2 -->
+                                <div class="border border-gray-800 rounded-lg overflow-hidden">
+                                    <div class="h-48 bg-gray-800 flex items-center justify-center text-gray-600">
+                                        <i class="fas fa-image text-4xl"></i>
+                                    </div>
+                                    <div class="p-4">
+                                        <h3 class="font-medium text-white mb-1">TechRetail Mobile App</h3>
+                                        <p class="text-gray-400 text-sm mb-2">Mobile shopping experience for electronics retailer.</p>
+                                        <div class="flex flex-wrap gap-1 mt-2">
+                                            <span class="px-2 py-0.5 bg-gray-800 text-gray-400 rounded text-xs">Mobile</span>
+                                            <span class="px-2 py-0.5 bg-gray-800 text-gray-400 rounded text-xs">UI/UX</span>
+                                            <span class="px-2 py-0.5 bg-gray-800 text-gray-400 rounded text-xs">React Native</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Project 3 -->
+                                <div class="border border-gray-800 rounded-lg overflow-hidden">
+                                    <div class="h-48 bg-gray-800 flex items-center justify-center text-gray-600">
+                                        <i class="fas fa-image text-4xl"></i>
+                                    </div>
+                                    <div class="p-4">
+                                        <h3 class="font-medium text-white mb-1">FreshMarket Website</h3>
+                                        <p class="text-gray-400 text-sm mb-2">Grocery delivery service with advanced filtering.</p>
+                                        <div class="flex flex-wrap gap-1 mt-2">
+                                            <span class="px-2 py-0.5 bg-gray-800 text-gray-400 rounded text-xs">E-commerce</span>
+                                            <span class="px-2 py-0.5 bg-gray-800 text-gray-400 rounded text-xs">UI/UX</span>
+                                            <span class="px-2 py-0.5 bg-gray-800 text-gray-400 rounded text-xs">JavaScript</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Client Reviews -->
+                        <div class="card p-6">
+                            <h2 class="text-xl font-semibold text-white mb-4">Client Reviews</h2>
+                            
+                            <div class="space-y-6">
+                                <!-- Review 1 -->
+                                <div class="border-b border-gray-800 pb-6">
+                                    <div class="flex justify-between items-start mb-3">
+                                        <div>
+                                            <h3 class="font-medium text-white">Michael Johnson</h3>
+                                            <p class="text-gray-500 text-sm">TechRetail Solutions</p>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <div class="flex text-yellow-500">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="text-gray-500 text-sm ml-2">March 2023</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-300">
+                                        Alex completely transformed our outdated e-commerce site into a modern, user-friendly platform. Their attention to detail and focus on the user experience led to a 35% increase in mobile conversions within the first month after launch. Highly recommended for any e-commerce project!
+                                    </p>
+                                </div>
+                                
+                                <!-- Review 2 -->
+                                <div class="border-b border-gray-800 pb-6">
+                                    <div class="flex justify-between items-start mb-3">
+                                        <div>
+                                            <h3 class="font-medium text-white">Sarah Williams</h3>
+                                            <p class="text-gray-500 text-sm">FreshMarket Inc.</p>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <div class="flex text-yellow-500">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="text-gray-500 text-sm ml-2">December 2022</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-300">
+                                        Working with Alex was a pleasure from start to finish. They took the time to understand our business needs and created a design that perfectly aligned with our brand. The project was delivered on time and on budget, with excellent communication throughout the process.
+                                    </p>
+                                </div>
+                                
+                                <!-- Review 3 -->
+                                <div>
+                                    <div class="flex justify-between items-start mb-3">
+                                        <div>
+                                            <h3 class="font-medium text-white">David Thompson</h3>
+                                            <p class="text-gray-500 text-sm">LuxHome Decor</p>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <div class="flex text-yellow-500">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </div>
+                                            <span class="text-gray-500 text-sm ml-2">October 2022</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-300">
+                                        Alex's design expertise significantly improved our website's user experience. Their knowledge of e-commerce best practices helped us optimize our conversion funnel and reduce cart abandonment. The responsive design works flawlessly on all devices, and we've received numerous compliments from our customers.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    // Simple tab functionality
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const tabLinks = document.querySelectorAll('.tab-link');
+                        const tabContents = document.querySelectorAll('.tab-content');
+                        
+                        tabLinks.forEach(link => {
+                            link.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                
+                                // Remove active class from all tabs
+                                tabLinks.forEach(link => {
+                                    link.classList.remove('text-indigo-500', 'border-b-2', 'border-indigo-500');
+                                    link.classList.add('text-gray-500');
+                                });
+                                
+                                // Add active class to current tab
+                                this.classList.add('text-indigo-500', 'border-b-2', 'border-indigo-500');
+                                this.classList.remove('text-gray-500');
+                                
+                                // Hide all tab content
+                                tabContents.forEach(content => {
+                                    content.classList.add('hidden');
+                                });
+                                
+                                // Show relevant tab content
+                                const tabId = this.getAttribute('href').substring(1);
+                                document.getElementById(tabId).classList.remove('hidden');
+                            });
+                        });
+
+                        // Project Preview Modal Functionality
+                        const modal = document.getElementById('projectPreviewModal');
+                        const approveContractBtn = document.getElementById('approveContractBtn');
+                        const closeModalBtn = document.getElementById('closeModalBtn');
+                        const approveBtn = document.getElementById('approveBtn');
+                        
+                        approveContractBtn.addEventListener('click', function() {
+                            modal.classList.remove('hidden');
+                            document.body.classList.add('overflow-hidden'); // Prevent scrolling behind modal
+                        });
+                        
+                        closeModalBtn.addEventListener('click', function() {
+                            modal.classList.add('hidden');
+                            document.body.classList.remove('overflow-hidden');
+                        });
+                        
+                        approveBtn.addEventListener('click', function() {
+                            // Here you would typically send an API request to approve the contract
+                            // For now, we'll just close the modal and show a success message
+                            modal.classList.add('hidden');
+                            document.body.classList.remove('overflow-hidden');
+                            
+                            // Show success message
+                            const alert = document.createElement('div');
+                            alert.className = 'fixed bottom-4 right-4 bg-green-600 text-white px-6 py-3 rounded-md shadow-lg';
+                            alert.innerHTML = '<div class="flex items-center"><i class="fas fa-check-circle mr-2"></i> Contract approved successfully!</div>';
+                            document.body.appendChild(alert);
+                            
+                            // Remove success message after 3 seconds
+                            setTimeout(() => {
+                                alert.remove();
+                            }, 3000);
+                        });
+                    });
+                </script>
+            </main>
+        </div>
+    </div>
+
+    <!-- Project Preview Modal -->
+    <div id="projectPreviewModal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto text-black">
+            <div class="flex justify-between items-center p-4 border-b border-gray-200">
+                <h2 class="text-xl font-bold">Project Preview</h2>
+                <button id="closeModalBtn" class="text-gray-500 hover:text-gray-700 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="p-4">
+                <!-- Project Mockup -->
+                <div class="bg-teal-600 rounded p-8 mb-6 flex items-center justify-center h-48">
+                    <h3 class="text-white text-3xl font-bold">E-commerce Website Mockup</h3>
+                </div>
+                
+                <!-- Key Features -->
+                <div class="mb-6">
+                    <h3 class="font-bold mb-3">Key Features:</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <div class="rounded-full bg-indigo-100 p-1 mr-2">
+                                <i class="fas fa-check text-indigo-600 text-xs"></i>
+                            </div>
+                            Responsive design for all devices
+                        </li>
+                        <li class="flex items-start">
+                            <div class="rounded-full bg-indigo-100 p-1 mr-2">
+                                <i class="fas fa-check text-indigo-600 text-xs"></i>
+                            </div>
+                            Streamlined checkout process
+                        </li>
+                        <li class="flex items-start">
+                            <div class="rounded-full bg-indigo-100 p-1 mr-2">
+                                <i class="fas fa-check text-indigo-600 text-xs"></i>
+                            </div>
+                            Modern UI elements and animations
+                        </li>
+                        <li class="flex items-start">
+                            <div class="rounded-full bg-indigo-100 p-1 mr-2">
+                                <i class="fas fa-check text-indigo-600 text-xs"></i>
+                            </div>
+                            Integration with existing inventory system
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Description -->
+                <div>
+                    <h3 class="font-bold mb-3">Description:</h3>
+                    <p class="text-gray-700 mb-4">
+                        This e-commerce website redesign focuses on improving user experience and conversion rates. The new design features a cleaner layout, more intuitive navigation, and optimized product pages.
+                    </p>
+                    <p class="text-gray-700">
+                        The checkout process has been simplified from 5 steps to 3 steps, with a progress indicator to guide users. Mobile responsiveness has been improved to ensure a seamless experience across all devices.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 p-4 flex justify-end space-x-3">
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition">
+                    Request Revisions
+                </button>
+                <button id="approveBtn" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition">
+                    Approve
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

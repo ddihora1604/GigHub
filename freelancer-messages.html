@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigHub - Freelancer Messages</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white freelancer-theme">
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <nav class="navbar px-4 py-3 flex items-center justify-between border-b border-gray-800">
+            <div class="flex items-center">
+                <a href="freelancer-dashboard.html" class="text-2xl font-bold text-green-500">GigHub</a>
+                <span class="ml-2 bg-green-900 px-2 py-1 rounded text-xs text-white">Freelancer</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <div class="relative">
+                    <button class="flex items-center text-sm font-medium text-gray-300 hover:text-white">
+                        <span>John</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <div class="sidebar w-64 border-r border-gray-800">
+                <div class="flex flex-col h-full py-4">
+                    <a href="freelancer-dashboard.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-home text-lg w-6"></i>
+                        <span class="ml-3">Dashboard</span>
+                    </a>
+                    <a href="project-search.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-search text-lg w-6"></i>
+                        <span class="ml-3">Find Projects</span>
+                    </a>
+                    <a href="freelancer-projects.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-project-diagram text-lg w-6"></i>
+                        <span class="ml-3">My Projects</span>
+                    </a>
+                    <a href="freelancer-messages.html" class="menu-item active flex items-center px-6 py-3">
+                        <i class="fas fa-comment text-lg w-6"></i>
+                        <span class="ml-3">Messages</span>
+                    </a>
+                    <a href="freelancer-profile.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-user text-lg w-6"></i>
+                        <span class="ml-3">Profile</span>
+                    </a>
+                    <a href="freelancer-pay.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-credit-card text-lg w-6"></i>
+                        <span class="ml-3">Payments</span>
+                    </a>
+                    <a href="login.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-sign-out-alt text-lg w-6"></i>
+                        <span class="ml-3">Logout</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="flex-1 overflow-hidden flex">
+                <!-- Conversation List -->
+                <div class="w-64 border-r border-gray-800 overflow-y-auto">
+                    <div class="p-4 border-b border-gray-800">
+                        <div class="relative">
+                            <input type="text" placeholder="Search conversations..." class="pl-10 pr-4 py-2 bg-gray-900 border border-gray-800 rounded-md w-full text-white text-sm">
+                            <div class="absolute left-3 top-2.5 text-gray-400">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Conversation Items -->
+                    <div>
+                        <div class="py-3 px-4 bg-gray-900 border-b border-gray-800 hover:bg-gray-800 cursor-pointer">
+                            <div class="flex items-center">
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex justify-between items-center">
+                                        <h3 class="text-sm font-medium text-white truncate">John Anderson</h3>
+                                        <span class="text-xs text-gray-400">1:30 PM</span>
+                                    </div>
+                                    <p class="text-xs text-gray-400 truncate">I just reviewed your proposal for the e-commerce website. It looks...</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="py-3 px-4 border-b border-gray-800 hover:bg-gray-800 cursor-pointer">
+                            <div class="flex items-center">
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex justify-between items-center">
+                                        <h3 class="text-sm font-medium text-white truncate">Alex Morgan</h3>
+                                        <span class="text-xs text-gray-400">Yesterday</span>
+                                    </div>
+                                    <p class="text-xs text-gray-400 truncate">Can you share some examples of your previous UI/UX work?</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="py-3 px-4 border-b border-gray-800 hover:bg-gray-800 cursor-pointer">
+                            <div class="flex items-center">
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex justify-between items-center">
+                                        <h3 class="text-sm font-medium text-white truncate">TechRetail Solutions</h3>
+                                        <span class="text-xs text-gray-400">Monday</span>
+                                    </div>
+                                    <p class="text-xs text-gray-400 truncate">We'd like to schedule a call to discuss the project timeline</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="py-3 px-4 border-b border-gray-800 hover:bg-gray-800 cursor-pointer">
+                            <div class="flex items-center">
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex justify-between items-center">
+                                        <h3 class="text-sm font-medium text-white truncate">Emily Zhang</h3>
+                                        <span class="text-xs text-gray-400">Last week</span>
+                                    </div>
+                                    <p class="text-xs text-gray-400 truncate">The landing page looks fantastic! We'd like to hire you for more work</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="py-3 px-4 border-b border-gray-800 hover:bg-gray-800 cursor-pointer">
+                            <div class="flex items-center">
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex justify-between items-center">
+                                        <h3 class="text-sm font-medium text-white truncate">GigHub Support</h3>
+                                        <span class="text-xs text-gray-400">Mar 25</span>
+                                    </div>
+                                    <p class="text-xs text-gray-400 truncate">Your profile verification is now complete. Welcome to GigHub Pro!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chat Area -->
+                <div class="flex-1 flex flex-col overflow-hidden">
+                    <!-- Chat Header -->
+                    <div class="px-4 py-3 border-b border-gray-800 flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div>
+                                <h3 class="font-medium text-white">John Anderson</h3>
+                                <p class="text-xs text-gray-400">Online</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button class="text-gray-400 hover:text-white p-2">
+                                <i class="fas fa-video"></i>
+                            </button>
+                            <button class="text-gray-400 hover:text-white p-2">
+                                <i class="fas fa-phone"></i>
+                            </button>
+                            <button class="text-gray-400 hover:text-white p-2">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Notice -->
+                    <div class="bg-gray-900 px-4 py-3 flex items-center">
+                        <div class="flex-shrink-0 mr-2">
+                            <i class="fas fa-robot text-gray-400"></i>
+                        </div>
+                        <p class="text-xs text-gray-400">This chat is monitored by our AI to ensure compliance with platform policies. For your safety, don't share personal contact information.</p>
+                    </div>
+                    
+                    <!-- Messages -->
+                    <div class="flex-1 p-4 overflow-y-auto" id="message-container">
+                        <!-- Date Indicator -->
+                        <div class="text-center text-xs text-gray-500 my-3">Today, April 3, 2025</div>
+                        
+                        <!-- Received Message -->
+                        <div class="flex mb-4 max-w-3xl">
+                            <div class="max-w-[80%]">
+                                <div class="bg-gray-900 p-3 rounded-lg">
+                                    <p class="text-sm text-white">Hello Alex, I just reviewed your proposal for the e-commerce website redesign. I'm really impressed with your portfolio.</p>
+                                </div>
+                                <div class="text-xs text-gray-500 mt-1">11:15 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="flex mb-4 max-w-3xl">
+                            <div class="max-w-[80%]">
+                                <div class="bg-gray-900 p-3 rounded-lg">
+                                    <p class="text-sm text-white">I particularly liked the work you did for TechSolutions. Can you tell me a bit more about your process for e-commerce sites?</p>
+                                </div>
+                                <div class="text-xs text-gray-500 mt-1">11:17 AM</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Sent Message -->
+                        <div class="flex justify-end mb-4">
+                            <div class="max-w-[80%]">
+                                <div class="bg-green-600 p-3 rounded-lg">
+                                    <p class="text-sm text-white">Thank you, John! I'm glad you liked my portfolio. For e-commerce sites, I focus on creating user-friendly interfaces that optimize the shopping experience and conversion rates.</p>
+                                </div>
+                                <div class="text-xs text-gray-500 mt-1 text-right">11:25 AM</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-end mb-4">
+                            <div class="max-w-[80%]">
+                                <div class="bg-green-600 p-3 rounded-lg">
+                                    <p class="text-sm text-white">With TechSolutions, I conducted extensive user research to identify pain points in their shopping flow and redesigned the interface to create a more intuitive experience.</p>
+                                </div>
+                                <div class="text-xs text-gray-500 mt-1 text-right">11:25 AM</div>
+                            </div>
+                        </div>
+
+                        <!-- More messages from the reference image -->
+                        <div class="flex mb-4 max-w-3xl">
+                            <div class="max-w-[80%]">
+                                <div class="bg-gray-900 p-3 rounded-lg">
+                                    <p class="text-sm text-white">I particularly liked the work you did for TechSolutions. Can you tell me a bit more about your process for e-commerce sites?</p>
+                                </div>
+                                <div class="text-xs text-gray-500 mt-1">11:17 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end mb-4">
+                            <div class="max-w-[80%]">
+                                <div class="bg-green-600 p-3 rounded-lg">
+                                    <p class="text-sm text-white">Thank you, John! I'm glad you liked my portfolio. For e-commerce sites, I focus on creating user-friendly interfaces that optimize the shopping experience and conversion rates.</p>
+                                </div>
+                                <div class="text-xs text-gray-500 mt-1 text-right">11:25 AM</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Message Input -->
+                    <div class="px-4 py-3 border-t border-gray-800">
+                        <div class="flex items-center">
+                            <button class="text-gray-400 hover:text-white p-2">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <div class="flex-1 mx-2">
+                                <input type="text" placeholder="Type a message..." class="w-full px-4 py-2 bg-gray-900 border border-gray-800 rounded-full text-white">
+                            </div>
+                            <button class="text-gray-400 hover:text-white p-2">
+                                <i class="far fa-smile"></i>
+                            </button>
+                            <button class="bg-green-600 hover:bg-green-700 text-white p-2 rounded-full ml-2">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-2 flex items-center justify-center">
+                            <i class="fas fa-shield-alt mr-2"></i> Messages are monitored by AI for platform policy compliance
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <style>
+        /* Ensuring proper scrolling for message container */
+        #message-container {
+            max-height: calc(100vh - 210px);
+            overflow-y: auto;
+            scrollbar-width: thin;
+        }
+        
+        @media (max-width: 640px) {
+            #message-container {
+                max-height: calc(100vh - 240px);
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll to bottom of message container
+            const messageContainer = document.getElementById('message-container');
+            messageContainer.scrollTop = messageContainer.scrollHeight;
+            
+            // Handle message input
+            const messageInput = document.querySelector('input[placeholder="Type a message..."]');
+            const sendButton = document.querySelector('.bg-green-600.rounded-full');
+            
+            function sendMessage() {
+                const message = messageInput.value.trim();
+                if (message) {
+                    // Create new message element
+                    const messageHTML = `
+                        <div class="flex justify-end mb-4">
+                            <div class="max-w-[80%]">
+                                <div class="bg-green-600 p-3 rounded-lg">
+                                    <p class="text-sm text-white">${message}</p>
+                                </div>
+                                <div class="text-xs text-gray-500 mt-1 text-right">${getCurrentTime()}</div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Add to message container
+                    messageContainer.insertAdjacentHTML('beforeend', messageHTML);
+                    
+                    // Clear input and scroll to bottom
+                    messageInput.value = '';
+                    messageContainer.scrollTop = messageContainer.scrollHeight;
+                }
+            }
+            
+            // Get current time in 12-hour format
+            function getCurrentTime() {
+                const now = new Date();
+                let hours = now.getHours();
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const ampm = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12;
+                hours = hours ? hours : 12; // the hour '0' should be '12'
+                return `${hours}:${minutes} ${ampm}`;
+            }
+            
+            // Event listeners
+            sendButton.addEventListener('click', sendMessage);
+            messageInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+            
+            // Make conversation items clickable
+            const conversationItems = document.querySelectorAll('.py-3.px-4.border-b.border-gray-800, .py-3.px-4.bg-gray-900.border-b.border-gray-800');
+            conversationItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove bg-gray-900 from all conversation items
+                    conversationItems.forEach(i => {
+                        i.classList.remove('bg-gray-900');
+                    });
+                    // Add bg-gray-900 to clicked item
+                    this.classList.add('bg-gray-900');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

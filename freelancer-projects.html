@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigHub - My Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white freelancer-theme">
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <nav class="navbar px-4 py-3 flex items-center justify-between border-b border-gray-800">
+            <div class="flex items-center">
+                <a href="freelancer-dashboard.html" class="text-2xl font-bold text-green-500">GigHub</a>
+                <span class="ml-2 bg-green-900 px-2 py-1 rounded text-xs text-white">Freelancer</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <div class="relative">
+                    <button class="flex items-center text-sm font-medium text-gray-300 hover:text-white">
+                        <span>John</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <div class="sidebar w-64 border-r border-gray-800">
+                <div class="flex flex-col h-full py-4">
+                    <a href="freelancer-dashboard.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-home text-lg w-6"></i>
+                        <span class="ml-3">Dashboard</span>
+                    </a>
+                    <a href="project-search.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-search text-lg w-6"></i>
+                        <span class="ml-3">Find Projects</span>
+                    </a>
+                    <a href="freelancer-projects.html" class="menu-item active flex items-center px-6 py-3">
+                        <i class="fas fa-project-diagram text-lg w-6"></i>
+                        <span class="ml-3">My Projects</span>
+                    </a>
+                    <a href="freelancer-messages.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-comment text-lg w-6"></i>
+                        <span class="ml-3">Messages</span>
+                    </a>
+                    <a href="freelancer-profile.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-user text-lg w-6"></i>
+                        <span class="ml-3">Profile</span>
+                    </a>
+                    <a href="freelancer-pay.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-credit-card text-lg w-6"></i>
+                        <span class="ml-3">Payments</span>
+                    </a>
+                    <a href="login.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-sign-out-alt text-lg w-6"></i>
+                        <span class="ml-3">Logout</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="flex-1 overflow-auto p-6">
+                <div class="mb-4">
+                    <h1 class="text-2xl font-bold text-white">My Projects</h1>
+                    <p class="text-gray-400">Manage all your active and completed projects</p>
+                </div>
+
+                <!-- Project Tabs -->
+                <div class="flex mb-4">
+                    <button class="bg-green-900 text-white px-4 py-2 rounded-l-md">All Projects</button>
+                    <button class="px-4 py-2 text-gray-400 hover:text-white">In Progress</button>
+                    <button class="px-4 py-2 text-gray-400 hover:text-white">Completed</button>
+                    <button class="px-4 py-2 text-gray-400 hover:text-white">Pending</button>
+                    <div class="flex-grow flex justify-end">
+                        <div class="relative">
+                            <input type="text" placeholder="Search my projects..." class="pl-10 pr-4 py-2 bg-gray-900 border border-gray-800 rounded-md w-64 text-white">
+                            <div class="absolute left-3 top-2.5 text-gray-400">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Table -->
+                <div class="overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead class="text-left text-gray-400 text-sm uppercase">
+                            <tr class="border-b border-gray-800">
+                                <th class="py-3 pr-4 font-medium">PROJECT</th>
+                                <th class="py-3 px-4 font-medium">STATUS</th>
+                                <th class="py-3 px-4 font-medium">CLIENT</th>
+                                <th class="py-3 px-4 font-medium">DUE DATE</th>
+                                <th class="py-3 px-4 font-medium">BUDGET</th>
+                                <th class="py-3 pl-4 font-medium text-right">ACTIONS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-800">
+                                <td class="py-4 pr-4">
+                                    <div class="font-medium">E-commerce Website Redesign</div>
+                                    <div class="text-sm text-gray-400">Frontend & UI/UX Design</div>
+                                </td>
+                                <td class="py-4 px-4">
+                                    <span class="bg-yellow-800 text-yellow-400 px-3 py-1 rounded-full text-xs">In Progress</span>
+                                </td>
+                                <td class="py-4 px-4 text-gray-300">John Anderson</td>
+                                <td class="py-4 px-4 text-gray-400">May 15, 2025</td>
+                                <td class="py-4 px-4 font-medium">$2,500</td>
+                                <td class="py-4 pl-4 text-right">
+                                    <a href="freelancer-project-details.html" class="text-green-500 hover:text-green-400 px-2">View</a>
+                                    <a href="#" class="text-gray-400 hover:text-white px-2">Message</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-800">
+                                <td class="py-4 pr-4">
+                                    <div class="font-medium">Mobile App Development</div>
+                                    <div class="text-sm text-gray-400">React Native, API Integration</div>
+                                </td>
+                                <td class="py-4 px-4">
+                                    <span class="bg-green-800 text-green-400 px-3 py-1 rounded-full text-xs">Completed</span>
+                                </td>
+                                <td class="py-4 px-4 text-gray-300">Alex Morgan</td>
+                                <td class="py-4 px-4 text-gray-400">Mar 30, 2025</td>
+                                <td class="py-4 px-4 font-medium">$5,000</td>
+                                <td class="py-4 pl-4 text-right">
+                                    <a href="#" class="text-green-500 hover:text-green-400 px-2">View</a>
+                                    <a href="#" class="text-gray-400 hover:text-white px-2">Message</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-800">
+                                <td class="py-4 pr-4">
+                                    <div class="font-medium">Landing Page Design</div>
+                                    <div class="text-sm text-gray-400">Figma, Responsive Design</div>
+                                </td>
+                                <td class="py-4 px-4">
+                                    <span class="bg-blue-800 text-blue-400 px-3 py-1 rounded-full text-xs">Ready for Review</span>
+                                </td>
+                                <td class="py-4 px-4 text-gray-300">Emily Zhang</td>
+                                <td class="py-4 px-4 text-gray-400">Apr 10, 2025</td>
+                                <td class="py-4 px-4 font-medium">$800</td>
+                                <td class="py-4 pl-4 text-right">
+                                    <a href="#" class="text-green-500 hover:text-green-400 px-2">View</a>
+                                    <a href="#" class="text-gray-400 hover:text-white px-2">Message</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-800">
+                                <td class="py-4 pr-4">
+                                    <div class="font-medium">Content Writing for Blog</div>
+                                    <div class="text-sm text-gray-400">SEO, Marketing Content</div>
+                                </td>
+                                <td class="py-4 px-4">
+                                    <span class="bg-blue-800 text-blue-400 px-3 py-1 rounded-full text-xs">Pending Approval</span>
+                                </td>
+                                <td class="py-4 px-4 text-gray-300">GrowthHackers</td>
+                                <td class="py-4 px-4 text-gray-400">Apr 16, 2025</td>
+                                <td class="py-4 px-4 font-medium">$1,200</td>
+                                <td class="py-4 pl-4 text-right">
+                                    <a href="#" class="text-green-500 hover:text-green-400 px-2">View</a>
+                                    <a href="#" class="text-gray-400 hover:text-white px-2">Message</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-800">
+                                <td class="py-4 pr-4">
+                                    <div class="font-medium">WordPress Website Migration</div>
+                                    <div class="text-sm text-gray-400">WordPress, PHP, MySQL</div>
+                                </td>
+                                <td class="py-4 px-4">
+                                    <span class="bg-green-800 text-green-400 px-3 py-1 rounded-full text-xs">Completed</span>
+                                </td>
+                                <td class="py-4 px-4 text-gray-300">Michael Lee</td>
+                                <td class="py-4 px-4 text-gray-400">Feb 28, 2025</td>
+                                <td class="py-4 px-4 font-medium">$950</td>
+                                <td class="py-4 pl-4 text-right">
+                                    <a href="#" class="text-green-500 hover:text-green-400 px-2">View</a>
+                                    <a href="#" class="text-gray-400 hover:text-white px-2">Message</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="mt-4 flex justify-between items-center">
+                    <div class="text-sm text-gray-400">
+                        Showing <span class="text-white">1</span> to <span class="text-white">5</span> of <span class="text-white">8</span> projects
+                    </div>
+                    <div class="flex space-x-1">
+                        <a href="#" class="flex items-center justify-center w-8 h-8 border border-gray-800 text-gray-400 rounded-l">
+                            <i class="fas fa-chevron-left text-xs"></i>
+                        </a>
+                        <a href="#" class="flex items-center justify-center w-8 h-8 border border-gray-800 bg-green-900 text-green-500 font-medium">1</a>
+                        <a href="#" class="flex items-center justify-center w-8 h-8 border border-gray-800 text-gray-400">2</a>
+                        <a href="#" class="flex items-center justify-center w-8 h-8 border border-gray-800 text-gray-400 rounded-r">
+                            <i class="fas fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Upcoming Milestones Section -->
+                <div class="mt-8">
+                    <h2 class="text-xl font-bold text-white mb-4">Upcoming Milestones</h2>
+                    <div class="bg-gray-900 border border-gray-800 rounded-lg p-4 flex justify-between items-center">
+                        <div>
+                            <h3 class="font-medium text-white">E-commerce Website: Frontend Implementation</h3>
+                            <p class="text-sm text-gray-400">Client: John Anderson</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-green-500 font-medium">$800</p>
+                            <p class="text-sm text-gray-400">Due: Apr 25, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html> 

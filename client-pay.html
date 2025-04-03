@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigHub - Payments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white client-theme">
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <nav class="navbar px-4 py-3 flex items-center justify-between border-b border-gray-800">
+            <div class="flex items-center">
+                <a href="client-dashboard.html" class="text-2xl font-bold text-indigo-600">GigHub</a>
+                <span class="ml-2 bg-indigo-900 px-2 py-1 rounded text-xs text-white">Client</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <div class="relative">
+                    <button class="flex items-center text-sm font-medium text-gray-300 hover:text-white">
+                        <!-- <img src="/api/placeholder/30/30" alt="Profile" class="h-8 w-8 rounded-full mr-2"> -->
+                        <span>John</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <div class="sidebar w-64 px-3 py-4 flex flex-col">
+                <a href="client-dashboard.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-home mr-3"></i>
+                    Dashboard
+                </a>
+                <a href="client-projects.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-project-diagram mr-3"></i>
+                    My Projects
+                </a>
+                <a href="post-project.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-plus-circle mr-3"></i>
+                    Post New Project
+                </a>
+                <a href="client-messages.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-comment mr-3"></i>
+                    Messages
+                </a>
+                <a href="client-profile.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-user mr-3"></i>
+                    Profile
+                </a>
+                <a href="client-pay.html" class="menu-item active py-2 px-4">
+                    <i class="fas fa-credit-card mr-3"></i>
+                    Payments
+                </a>
+                <a href="login.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-sign-out-alt mr-3"></i>
+                    Logout
+                </a>
+            </div>
+
+            <!-- Main Content -->
+            <main class="flex-1 overflow-auto p-6">
+                <!-- Payment Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="card p-6">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-400">Total in Escrow</p>
+                                <p class="text-2xl font-bold text-white">$8,750.00</p>
+                            </div>
+                            <div class="p-3 rounded-full bg-indigo-900/70 text-indigo-500">
+                                <i class="fas fa-lock text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card p-6">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-400">Released This Month</p>
+                                <p class="text-2xl font-bold text-white">$3,250.00</p>
+                            </div>
+                            <div class="p-3 rounded-full bg-green-900/70 text-green-500">
+                                <i class="fas fa-check-circle text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card p-6">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-400">Pending Reviews</p>
+                                <p class="text-2xl font-bold text-white">3</p>
+                            </div>
+                            <div class="p-3 rounded-full bg-yellow-900/70 text-yellow-500">
+                                <i class="fas fa-star text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Funds in Escrow -->
+                <div class="mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold text-white">Funds in Escrow</h2>
+                        <span class="text-indigo-500">Awaiting Project Completion</span>
+                    </div>
+                    
+                    <div class="card overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full table">
+                                <thead>
+                                    <tr>
+                                        <th>PROJECT</th>
+                                        <th>FREELANCER</th>
+                                        <th>AMOUNT</th>
+                                        <th>ESCROW DATE</th>
+                                        <th>STATUS</th>
+                                        <th>ACTIONS</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-800">
+                                    <tr>
+                                        <td class="py-4">
+                                            <div class="font-medium text-white">E-commerce Website Redesign</div>
+                                            <div class="text-sm text-gray-400">Due: Apr 15, 2025</div>
+                                        </td>
+                                        <td class="py-4">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-500 font-medium mr-2">MR</div>
+                                                <span class="text-gray-300">Michael Rodriguez</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 font-medium text-white">$3,500.00</td>
+                                        <td class="py-4 text-sm text-gray-400">Mar 28, 2025</td>
+                                        <td class="py-4">
+                                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-yellow-900/50 text-yellow-500">
+                                                In Progress
+                                            </span>
+                                        </td>
+                                        <td class="py-4 text-sm">
+                                            <button class="text-indigo-500 hover:text-indigo-400">View Details</button>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="py-4">
+                                            <div class="font-medium text-white">Mobile App UI Design</div>
+                                            <div class="text-sm text-gray-400">Due: Apr 22, 2025</div>
+                                        </td>
+                                        <td class="py-4">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-500 font-medium mr-2">AM</div>
+                                                <span class="text-gray-300">Alex Morgan</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 font-medium text-white">$4,500.00</td>
+                                        <td class="py-4 text-sm text-gray-400">Apr 1, 2025</td>
+                                        <td class="py-4">
+                                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-indigo-900/50 text-indigo-500">
+                                                80% Complete
+                                            </span>
+                                        </td>
+                                        <td class="py-4 text-sm">
+                                            <button class="text-indigo-500 hover:text-indigo-400">View Details</button>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="py-4">
+                                            <div class="font-medium text-white">Content Marketing Strategy</div>
+                                            <div class="text-sm text-gray-400">Due: Apr 10, 2025</div>
+                                        </td>
+                                        <td class="py-4">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 rounded-full bg-purple-900/50 flex items-center justify-center text-purple-500 font-medium mr-2">JD</div>
+                                                <span class="text-gray-300">James Davis</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 font-medium text-white">$750.00</td>
+                                        <td class="py-4 text-sm text-gray-400">Mar 25, 2025</td>
+                                        <td class="py-4">
+                                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-indigo-900/50 text-indigo-500">
+                                                Pending Review
+                                            </span>
+                                        </td>
+                                        <td class="py-4 text-sm space-x-2">
+                                            <button class="px-3 py-1 rounded-md text-xs font-medium bg-green-600 hover:bg-green-700 text-white">Release Funds</button>
+                                            <button class="px-3 py-1 rounded-md text-xs font-medium bg-gray-800 hover:bg-gray-700 text-white">Review</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Completed Payments -->
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold text-white">Completed Payments</h2>
+                        <span class="text-green-500">Funds Released</span>
+                    </div>
+                    
+                    <div class="card overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full table">
+                                <thead>
+                                    <tr>
+                                        <th>PROJECT</th>
+                                        <th>FREELANCER</th>
+                                        <th>AMOUNT</th>
+                                        <th>RELEASE DATE</th>
+                                        <th>RATING</th>
+                                        <th>ACTIONS</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-800">
+                                    <tr>
+                                        <td class="py-4">
+                                            <div class="font-medium text-white">Product Landing Page</div>
+                                            <div class="text-sm text-gray-400">Completed: Mar 20, 2025</div>
+                                        </td>
+                                        <td class="py-4">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-500 font-medium mr-2">EC</div>
+                                                <span class="text-gray-300">Emily Chen</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 font-medium text-white">$1,200.00</td>
+                                        <td class="py-4 text-sm text-gray-400">Mar 22, 2025</td>
+                                        <td class="py-4">
+                                            <div class="flex text-yellow-500">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 text-sm">
+                                            <button class="text-indigo-500 hover:text-indigo-400">View Receipt</button>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="py-4">
+                                            <div class="font-medium text-white">SEO Optimization</div>
+                                            <div class="text-sm text-gray-400">Completed: Mar 15, 2025</div>
+                                        </td>
+                                        <td class="py-4">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-500 font-medium mr-2">AP</div>
+                                                <span class="text-gray-300">Alex Patel</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 font-medium text-white">$850.00</td>
+                                        <td class="py-4 text-sm text-gray-400">Mar 18, 2025</td>
+                                        <td class="py-4">
+                                            <div class="flex text-yellow-500">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 text-sm">
+                                            <button class="text-indigo-500 hover:text-indigo-400">View Receipt</button>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="py-4">
+                                            <div class="font-medium text-white">Logo Design</div>
+                                            <div class="text-sm text-gray-400">Completed: Mar 5, 2025</div>
+                                        </td>
+                                        <td class="py-4">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-500 font-medium mr-2">SM</div>
+                                                <span class="text-gray-300">Sophia Martinez</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 font-medium text-white">$1,200.00</td>
+                                        <td class="py-4 text-sm text-gray-400">Mar 8, 2025</td>
+                                        <td class="py-4">
+                                            <div class="flex text-yellow-500">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 text-sm">
+                                            <button class="text-indigo-500 hover:text-indigo-400">View Receipt</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Simple interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle "Release Funds" button click
+            const releaseFundsButton = document.querySelector('.bg-green-600');
+            if (releaseFundsButton) {
+                releaseFundsButton.addEventListener('click', function() {
+                    if (confirm('Are you sure you want to release funds for this project? This action cannot be undone.')) {
+                        alert('Funds released successfully! Freelancer has been notified.');
+                        // In a real app, this would update the database and refresh the page
+                        this.closest('tr').remove();
+                    }
+                });
+            }
+            
+            // Make all "View Details" buttons interactive
+            const viewButtons = document.querySelectorAll('.text-indigo-500');
+            viewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const projectName = this.closest('tr').querySelector('.font-medium').textContent;
+                    alert(`Viewing details for: ${projectName}`);
+                    // In a real app, this would navigate to the project details page
+                });
+            });
+        });
+    </script>
+</body>
+</html>

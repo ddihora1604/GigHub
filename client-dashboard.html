@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigHub - Client Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white client-theme">
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <nav class="navbar px-4 py-3 flex items-center justify-between border-b border-gray-800">
+            <div class="flex items-center">
+                <a href="client-dashboard.html" class="text-2xl font-bold text-indigo-600">GigHub</a>
+                <span class="ml-2 bg-indigo-900 px-2 py-1 rounded text-xs text-white">Client</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <div class="relative">
+                    <button class="flex items-center text-sm font-medium text-gray-300 hover:text-white">
+                        <!-- <img src="/api/placeholder/30/30" alt="Profile" class="h-8 w-8 rounded-full mr-2"> -->
+                        <span>John</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <div class="sidebar w-64 px-3 py-4 flex flex-col">
+                <a href="client-dashboard.html" class="menu-item active py-2 px-4">
+                    <i class="fas fa-home mr-3"></i>
+                    Dashboard
+                </a>
+                <a href="client-projects.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-project-diagram mr-3"></i>
+                    My Projects
+                </a>
+                <a href="post-project.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-plus-circle mr-3"></i>
+                    Post New Project
+                </a>
+                <a href="client-messages.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-comment mr-3"></i>
+                    Messages
+                </a>
+                <a href="client-profile.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-user mr-3"></i>
+                    Profile
+                </a>
+                <a href="client-pay.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-credit-card mr-3"></i>
+                    Payments
+                </a>
+                <a href="login.html" class="menu-item py-2 px-4">
+                    <i class="fas fa-sign-out-alt mr-3"></i>
+                    Logout
+                </a>
+            </div>
+
+            <!-- Main Content -->
+            <main class="flex-1 overflow-auto p-6">
+                <div class="mb-6">
+                    <h1 class="text-2xl font-bold text-white">Welcome back, John</h1>
+                    <p class="text-gray-400">Here's what's happening with your projects today.</p>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="card p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-indigo-900 text-indigo-600">
+                                <i class="fas fa-clipboard-list text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-lg font-semibold text-gray-300">Active Projects</h2>
+                                <p class="text-3xl font-bold text-white">3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-indigo-900 text-indigo-600">
+                                <i class="fas fa-check-circle text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-lg font-semibold text-gray-300">Completed</h2>
+                                <p class="text-3xl font-bold text-white">12</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-indigo-900 text-indigo-600">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-lg font-semibold text-gray-300">New Messages</h2>
+                                <p class="text-3xl font-bold text-white">5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Recommendations -->
+                <div class="card p-6 mb-6">
+                    <h2 class="text-xl font-semibold text-white mb-4">Top AI Recommended Freelancers</h2>
+                    <p class="text-gray-400 mb-4">For your latest project: "E-commerce Website Redesign"</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 border border-gray-800 rounded-lg">
+                            <div class="flex items-center">
+                                <!-- <img src="/api/placeholder/50/50" alt="Freelancer" class="h-12 w-12 rounded-full"> -->
+                                <div class="ml-4">
+                                    <h3 class="font-medium text-white">Alex Morgan</h3>
+                                    <p class="text-gray-400 text-sm">UI/UX Designer | 5 years exp.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="mr-4 text-right">
+                                    <div class="flex items-center">
+                                        <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                        <span class="font-medium text-white">4.9</span>
+                                    </div>
+                                    <div class="text-sm text-gray-400">Gig Score: 98%</div>
+                                </div>
+                                <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded">Contact</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 border border-gray-800 rounded-lg">
+                            <div class="flex items-center">
+                                <!-- <img src="/api/placeholder/50/50" alt="Freelancer" class="h-12 w-12 rounded-full"> -->
+                                <div class="ml-4">
+                                    <h3 class="font-medium text-white">Michael Chen</h3>
+                                    <p class="text-gray-400 text-sm">Front-end Developer | 7 years exp.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="mr-4 text-right">
+                                    <div class="flex items-center">
+                                        <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                        <span class="font-medium text-white">4.8</span>
+                                    </div>
+                                    <div class="text-sm text-gray-400">Gig Score: 96%</div>
+                                </div>
+                                <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded">Contact</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 border border-gray-800 rounded-lg">
+                            <div class="flex items-center">
+                                <!-- <img src="/api/placeholder/50/50" alt="Freelancer" class="h-12 w-12 rounded-full"> -->
+                                <div class="ml-4">
+                                    <h3 class="font-medium text-white">David Wilson</h3>
+                                    <p class="text-gray-400 text-sm">Full-stack Developer | 4 years exp.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="mr-4 text-right">
+                                    <div class="flex items-center">
+                                        <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                        <span class="font-medium text-white">4.7</span>
+                                    </div>
+                                    <div class="text-sm text-gray-400">Gig Score: 93%</div>
+                                </div>
+                                <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 text-center">
+                        <a href="#" class="text-indigo-500 hover:text-indigo-400 font-medium">View all recommendations</a>
+                    </div>
+                </div>
+                
+                <!-- Recent Projects -->
+                <div class="card p-6">
+                    <h2 class="text-xl font-semibold text-white mb-4">Recent Projects</h2>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full table">
+                            <thead>
+                                <tr>
+                                    <th class="text-left">Project</th>
+                                    <th class="text-left">Status</th>
+                                    <th class="text-left">Freelancer</th>
+                                    <th class="text-left">Deadline</th>
+                                    <th class="text-right">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-800">
+                                <tr>
+                                    <td class="py-4">
+                                        <div class="font-medium text-white">E-commerce Website Redesign</div>
+                                        <div class="text-sm text-gray-400">Budget: $2,500</div>
+                                    </td>
+                                    <td class="py-4">
+                                        <span class="status-progress">In Progress</span>
+                                    </td>
+                                    <td class="py-4 text-sm text-gray-400">Awaiting assignment</td>
+                                    <td class="py-4 text-sm text-gray-400">May 15, 2025</td>
+                                    <td class="py-4 text-right">
+                                        <a href="#" class="text-indigo-500 hover:text-indigo-400">View</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4">
+                                        <div class="font-medium text-white">Mobile App Development</div>
+                                        <div class="text-sm text-gray-400">Budget: $5,000</div>
+                                    </td>
+                                    <td class="py-4">
+                                        <span class="status-completed">Completed</span>
+                                    </td>
+                                    <td class="py-4 text-sm text-gray-400">Alex Turner</td>
+                                    <td class="py-4 text-sm text-gray-400">March 30, 2025</td>
+                                    <td class="py-4 text-right">
+                                        <a href="#" class="text-indigo-500 hover:text-indigo-400">View</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4">
+                                        <div class="font-medium text-white">Content Writing for Blog</div>
+                                        <div class="text-sm text-gray-400">Budget: $800</div>
+                                    </td>
+                                    <td class="py-4">
+                                        <span class="status-progress">In Progress</span>
+                                    </td>
+                                    <td class="py-4 text-sm text-gray-400">Emily Watson</td>
+                                    <td class="py-4 text-sm text-gray-400">April 20, 2025</td>
+                                    <td class="py-4 text-right">
+                                        <a href="#" class="text-indigo-500 hover:text-indigo-400">View</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <a href="client-projects.html" class="text-indigo-500 hover:text-indigo-400 font-medium">View all projects</a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

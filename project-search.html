@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigHub - Find Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white freelancer-theme">
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <nav class="navbar px-4 py-3 flex items-center justify-between border-b border-gray-800">
+            <div class="flex items-center">
+                <a href="freelancer-dashboard.html" class="text-2xl font-bold text-green-500">GigHub</a>
+                <span class="ml-2 bg-green-900 px-2 py-1 rounded text-xs text-white">Freelancer</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <div class="relative">
+                    <button class="flex items-center text-sm font-medium text-gray-300 hover:text-white">
+                        <span>John</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <div class="sidebar w-64 border-r border-gray-800">
+                <div class="flex flex-col h-full py-4">
+                    <a href="freelancer-dashboard.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-home text-lg w-6"></i>
+                        <span class="ml-3">Dashboard</span>
+                    </a>
+                    <a href="project-search.html" class="menu-item active flex items-center px-6 py-3">
+                        <i class="fas fa-search text-lg w-6"></i>
+                        <span class="ml-3">Find Projects</span>
+                    </a>
+                    <a href="freelancer-projects.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-project-diagram text-lg w-6"></i>
+                        <span class="ml-3">My Projects</span>
+                    </a>
+                    <a href="freelancer-messages.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-comment text-lg w-6"></i>
+                        <span class="ml-3">Messages</span>
+                    </a>
+                    <a href="freelancer-profile.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-user text-lg w-6"></i>
+                        <span class="ml-3">Profile</span>
+                    </a>
+                    <a href="freelancer-pay.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-credit-card text-lg w-6"></i>
+                        <span class="ml-3">Payments</span>
+                    </a>
+                    <a href="login.html" class="menu-item flex items-center px-6 py-3">
+                        <i class="fas fa-sign-out-alt text-lg w-6"></i>
+                        <span class="ml-3">Logout</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="flex-1 overflow-auto p-6">
+                <h1 class="text-3xl font-bold text-white mb-2">Find Projects</h1>
+                <p class="text-gray-400 mb-6">Discover projects matching your skills and interests.</p>
+
+                <!-- Search and Filters -->
+                <div class="mb-6">
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex gap-4">
+                            <div class="flex-1">
+                                <div class="relative">
+                                    <input type="text" placeholder="Search projects..." class="pl-10 pr-4 py-2 bg-black border border-gray-800 rounded-md w-full text-white">
+                                    <div class="absolute left-3 top-2.5 text-gray-400">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-64">
+                                <div class="relative">
+                                    <select class="block w-full px-4 py-2 bg-black border border-gray-800 rounded-md text-white appearance-none cursor-pointer">
+                                        <option>All Categories</option>
+                                        <option>Web Development</option>
+                                        <option>Mobile Development</option>
+                                        <option>UI/UX Design</option>
+                                        <option>Writing & Translation</option>
+                                    </select>
+                                    <div class="absolute right-3 top-2.5 text-gray-400 pointer-events-none">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-64">
+                                <div class="relative">
+                                    <select class="block w-full px-4 py-2 bg-black border border-gray-800 rounded-md text-white appearance-none cursor-pointer">
+                                        <option>Any Budget</option>
+                                        <option>$0 - $1,000</option>
+                                        <option>$1,000 - $5,000</option>
+                                        <option>$5,000 - $10,000</option>
+                                        <option>$10,000+</option>
+                                    </select>
+                                    <div class="absolute right-3 top-2.5 text-gray-400 pointer-events-none">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <div class="flex items-center gap-2 bg-gray-900 rounded-full px-3 py-1">
+                                <span class="text-white text-sm">High Match Rate</span>
+                                <button class="text-white">
+                                    <i class="fas fa-times-circle"></i>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-2 bg-gray-900 rounded-full px-3 py-1">
+                                <span class="text-white text-sm">Web Development</span>
+                                <button class="text-white">
+                                    <i class="fas fa-times-circle"></i>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-2 bg-gray-900 rounded-full px-3 py-1">
+                                <span class="text-white text-sm">Remote Only</span>
+                                <button class="text-white">
+                                    <i class="fas fa-times-circle"></i>
+                                </button>
+                            </div>
+                            <button class="text-green-500 text-sm">Clear All</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Listings -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                    <!-- Project Card 1 -->
+                    <div class="bg-gray-900 border border-gray-800 rounded-lg p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-xl font-semibold text-white">E-commerce Website Redesign</h2>
+                            <div class="flex items-center bg-green-900/50 text-green-500 text-xs font-medium rounded-full px-3 py-1">
+                                <i class="fas fa-bolt mr-1"></i>
+                                <span>95% Match</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">Looking for an experienced UI/UX designer to redesign our e-commerce platform. The project involves refreshing the user interface, improving the checkout flow, and enhancing mobile responsiveness.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="text-gray-300">
+                                <span class="text-green-500 font-medium">$2,000 - $3,500</span>
+                                <span class="mx-2">•</span>
+                                <span>Fixed Price</span>
+                                <span class="mx-2">•</span>
+                                <span>Posted 2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">UI/UX</span>
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">Shopify</span>
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">Web Design</span>
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">E-commerce</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-building text-gray-500 mr-2"></i>
+                                <span class="text-gray-300 text-sm">TechRetail Solutions</span>
+                            </div>
+                            <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm">Apply Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="bg-gray-900 border border-gray-800 rounded-lg p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-xl font-semibold text-white">React Native Mobile App</h2>
+                            <div class="flex items-center bg-green-900/50 text-green-500 text-xs font-medium rounded-full px-3 py-1">
+                                <i class="fas fa-bolt mr-1"></i>
+                                <span>90% Match</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">We need a skilled React Native developer to create a cross-platform mobile app for our service. Experience with API integration, authentication flows, and state management is essential.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="text-gray-300">
+                                <span class="text-green-500 font-medium">$4,000 - $6,000</span>
+                                <span class="mx-2">•</span>
+                                <span>Fixed Price</span>
+                                <span class="mx-2">•</span>
+                                <span>Posted 5 days ago</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">React Native</span>
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">Mobile</span>
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">JavaScript</span>
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">Redux</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-building text-gray-500 mr-2"></i>
+                                <span class="text-gray-300 text-sm">Apptastic Inc.</span>
+                            </div>
+                            <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm">Apply Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="bg-gray-900 border border-gray-800 rounded-lg p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-xl font-semibold text-white">Content Writing for Blog Series</h2>
+                            <div class="flex items-center bg-green-900/50 text-green-500 text-xs font-medium rounded-full px-3 py-1">
+                                <i class="fas fa-bolt mr-1"></i>
+                                <span>88% Match</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">Looking for a content writer to create a series of blog posts about digital marketing strategies. Need someone with SEO knowledge and experience in writing engaging, informative content.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="text-gray-300">
+                                <span class="text-green-500 font-medium">$800 - $1,200</span>
+                                <span class="mx-2">•</span>
+                                <span>Fixed Price</span>
+                                <span class="mx-2">•</span>
+                                <span>Posted 1 week ago</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">Content Writing</span>
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">SEO</span>
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">Digital Marketing</span>
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">Blogging</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-building text-gray-500 mr-2"></i>
+                                <span class="text-gray-300 text-sm">MarketingPro Agency</span>
+                            </div>
+                            <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm">Apply Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="bg-gray-900 border border-gray-800 rounded-lg p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-xl font-semibold text-white">WordPress Website Development</h2>
+                            <div class="flex items-center bg-green-900/50 text-green-500 text-xs font-medium rounded-full px-3 py-1">
+                                <i class="fas fa-bolt mr-1"></i>
+                                <span>85% Match</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">We need a WordPress developer to create a professional website for our consulting business. The site should be responsive, SEO-friendly, and include contact forms and appointment scheduling.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="text-gray-300">
+                                <span class="text-green-500 font-medium">$1,500 - $2,500</span>
+                                <span class="mx-2">•</span>
+                                <span>Fixed Price</span>
+                                <span class="mx-2">•</span>
+                                <span>Posted 3 days ago</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">WordPress</span>
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">PHP</span>
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">HTML/CSS</span>
+                            <span class="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">Responsive</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-building text-gray-500 mr-2"></i>
+                                <span class="text-gray-300 text-sm">ConsultEx Group</span>
+                            </div>
+                            <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html> 
