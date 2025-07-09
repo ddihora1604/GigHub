@@ -1,5 +1,7 @@
 # GigHub - Freelancer Marketplace Platform
 
+Prototype: https://youtu.be/cg60ysIn7EA?si=6CzJzzh4t_rupSa7
+
 ## Overview
 
 GigHub is a comprehensive freelancer marketplace platform that connects clients with skilled professionals across various domains. The platform offers a streamlined experience for project posting, bidding, contract management, payment processing, and secure communication.
